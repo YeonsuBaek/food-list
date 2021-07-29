@@ -1,0 +1,22 @@
+%tag-base {
+  @include inline-flexbox;
+  height: 12px;
+  padding: 0 4px;
+  color: $white;
+  font-family: $font-eng;
+  font-size: 8px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.tag-red {
+  @extend %tag-base;
+  background-color: $red;
+}
+
+.tag-blue {
+  @extend %tag-base;
+  background-color: $blue;
+}
