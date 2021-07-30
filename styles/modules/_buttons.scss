@@ -22,18 +22,6 @@
   border-radius: 20px;
 }
 
-%btn-underlined-base {
-  @include inline-flexbox;
-  height: 78px;
-  padding: 0 26px;
-  font-family: $font-eng;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: -0.02em;
-  color: $primary;
-  border-bottom: 1px solid transparent;
-}
-
 .btn-primary {
   @extend %btn-base;
   background-color: $yellow;
@@ -107,19 +95,6 @@
   &.is-active {
     color: $white;
     background-color: $yellow;
-    border-color: $yellow;
-  }
-}
-
-.btn-underlined {
-  @extend %btn-underlined-base;
-
-  &:hover {
-    color: $yellow;
-  }
-
-  &.is-active {
-    color: $yellow;
     border-color: $yellow;
   }
 }
