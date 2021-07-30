@@ -75,12 +75,15 @@
         @include inline-flexbox;
         height: 70px;
         padding: 0 26px;
-        font-family: $font-eng;
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: -0.02em;
         color: $primary;
         border-bottom: 2px solid transparent;
+
+        a {
+          font-family: $font-eng;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: -0.02em;
+        }
 
         &:hover {
           color: $yellow;
