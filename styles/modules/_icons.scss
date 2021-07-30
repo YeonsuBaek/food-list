@@ -12,6 +12,13 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-logo:before {
+  content: '\e912';
+  color: #f2b705;
+}
+.ic-menu:before {
+  content: '\e911';
+}
 .ic-bell:before {
   content: '\e900';
 }
