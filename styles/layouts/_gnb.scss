@@ -15,14 +15,20 @@
       font-size: 16px;
       text-align: center;
     }
+
+    &.is-active {
+      .ic-logo {
+        color: $yellow;
+      }
+    }
   }
 
   &-left {
-    @include pos-center-y;
+    @include flexbox(start);
   }
 
   &-menu-button {
-    @include flexbox;
+    @include pos-center-y;
     width: 24px;
     height: 24px;
 
@@ -34,6 +40,56 @@
     &:active {
       .ic-menu {
         color: $yellow;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-wrapper {
+      height: 70px;
+    }
+
+    &-right {
+      @include flexbox(end);
+    }
+
+    &-user {
+      @include pos-center-y;
+    }
+  }
+
+  @include responsive(D) {
+    .logo {
+      .ic-logo {
+        font-size: 20px;
+        color: $primary;
+      }
+    }
+
+    &-wrapper {
+      @include flexbox(between);
+    }
+
+    &-nav {
+      &-item {
+        @include inline-flexbox;
+        height: 70px;
+        padding: 0 26px;
+        font-family: $font-eng;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        color: $primary;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+          color: $yellow;
+        }
+
+        &.is-active {
+          color: $yellow;
+          border-color: $yellow;
+        }
       }
     }
   }
