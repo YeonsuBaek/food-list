@@ -24,5 +24,52 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="gnb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h1 class="logo">
+              <a href="#" aria-label="홈으로 가기">
+                <i class="ic-logo"></i>
+              </a>
+            </h1>
+
+            <div class="gnb-left">
+              <nav class="gnb-nav sm-hidden">
+                <h2 class="visually-hidden">메뉴</h2>
+                <ul class="gnb-nav-list">
+                  <li class="gnb-nav-item">
+                    <a href="#"> SEARCH </a>
+                  </li>
+                  <li class="gnb-nav-item">
+                    <a href="#"> POST </a>
+                  </li>
+                  <li class="gnb-nav-item">
+                    <a href="#"> EVENT </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <button
+                class="gnb-icon-button sm-only"
+                type="button"
+                aria-label="메뉴 펼치기"
+              >
+                <i class="ic-menu"></i>
+              </button>
+            </div>
+
+            <div class="gnb-right">
+              <button class="gnb-user sm-hidden" type="button">
+                <div class="avatar-32">
+                  <img src="./assets/images/img-user-01.jpg" alt="엄기준" />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
