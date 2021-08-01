@@ -1,0 +1,21 @@
+.sidebar-menu {
+  padding: 24px 0;
+  border-bottom: 1px solid $border;
+
+  &-item {
+    padding: 6px 12px;
+
+    a {
+      @include flexbox(start);
+      width: 100%;
+      @include text-style(14, $primary);
+      font-weight: 700;
+    }
+
+    &.is-active {
+      a {
+        color: $yellow;
+      }
+    }
+  }
+}
