@@ -9,7 +9,7 @@
 
     &-explain {
       position: absolute;
-      top: $gnb-height-sm + 100px;
+      top: $gnb-height-sm + 80px;
       color: $white;
 
       .explain-summery {
@@ -23,7 +23,8 @@
 
     .view-button {
       @include pos-center-x;
-      bottom: 100px;
+      bottom: 80px;
+
       .btn-transparent {
         padding: 9px 16px;
         font-size: 14px;
@@ -50,6 +51,38 @@
 
     &.page-04 {
       background-image: url('./assets/images/img-cover-04.jpg');
+    }
+
+    @include responsive(T) {
+      &-explain {
+        top: $gnb-height-md + 100px;
+
+        .explain-summery {
+          margin-bottom: 10px;
+          font-size: 64px;
+          line-height: 1;
+          letter-spacing: -0.01em;
+        }
+
+        .explain-detail {
+          @include text-style(24);
+        }
+      }
+
+      .view-button {
+        bottom: 100px;
+
+        .btn-transparent {
+          padding: 26px 36px;
+          font-size: 24px;
+          line-height: 34px;
+          letter-spacing: -0.01em;
+
+          .ic-chevron {
+            font-size: 34px;
+          }
+        }
+      }
     }
   }
 }
