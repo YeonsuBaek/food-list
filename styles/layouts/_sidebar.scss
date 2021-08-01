@@ -2,11 +2,19 @@ body {
   background-color: #000;
 }
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $sidebar-level;
   width: 240px;
+  height: 100vh;
   padding: 32px 20px;
+  overflow-y: auto;
   background-color: $white;
+  overscroll-behavior: contain;
 
   &-header {
+    padding-bottom: 24px;
     border-bottom: 1px solid $border;
 
     .logo {
@@ -28,7 +36,6 @@ body {
   &-auth {
     @include flexbox(start);
     padding: 0 12px;
-    margin-bottom: 24px;
   }
 
   &-user {
@@ -58,5 +65,33 @@ body {
     a {
       width: 84px;
     }
+  }
+
+  &-user-menu {
+    padding-top: 24px;
+
+    .user-menu-item {
+      padding: 6px 12px;
+
+      a {
+        @include flexbox(start);
+        width: 100%;
+        @include text-style(14, $primary);
+      }
+
+      .ic-new {
+        font-size: 16px;
+      }
+
+      &.is-active {
+        a {
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
