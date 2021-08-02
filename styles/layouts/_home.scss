@@ -9,7 +9,7 @@
 
     &-explain {
       position: absolute;
-      top: $gnb-height-sm + 80px;
+      top: calc(#{$gnb-height-sm} + 10%);
       color: $white;
 
       .explain-summery {
@@ -23,13 +23,16 @@
 
     .view-button {
       @include pos-center-x;
-      bottom: 80px;
+      bottom: 10%;
+      flex-shrink: 0;
 
       .btn-transparent {
         padding: 9px 16px;
         font-size: 14px;
         line-height: 24px;
         letter-spacing: -0.01em;
+        flex-grow: 1;
+        white-space: nowrap;
 
         .ic-chevron {
           font-size: 22px;
@@ -55,11 +58,11 @@
 
     @include responsive(T) {
       &-explain {
-        top: $gnb-height-md + 100px;
+        top: calc(#{$gnb-height-md} + 10%);
 
         .explain-summery {
           margin-bottom: 10px;
-          font-size: 64px;
+          font-size: 48px;
           line-height: 1;
           letter-spacing: -0.01em;
         }
@@ -70,13 +73,12 @@
       }
 
       .view-button {
-        bottom: 100px;
-
         .btn-transparent {
-          padding: 26px 36px;
+          padding: 20px 32px;
           font-size: 24px;
           line-height: 34px;
           letter-spacing: -0.01em;
+          word-spacing: nowrap;
 
           .ic-chevron {
             font-size: 34px;
