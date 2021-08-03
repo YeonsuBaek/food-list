@@ -1,0 +1,43 @@
+.view-button {
+  @include inline-flexbox;
+  font-family: $font-eng;
+  color: $white;
+  border: 1px solid $white;
+  @include pos-center-x;
+  bottom: 10%;
+  flex-shrink: 0;
+
+  a {
+    padding: 9px 16px;
+    @include flexbox;
+
+    span {
+      display: inline-block;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      flex-grow: 1;
+      white-space: nowrap;
+    }
+
+    .ic-chevron {
+      margin-left: 14px;
+      color: $white;
+      font-size: 22px;
+    }
+  }
+
+  @include responsive(T) {
+    a {
+      padding: 20px 32px;
+
+      span {
+        font-size: 24px;
+        letter-spacing: -0.01em;
+      }
+
+      .ic-chevron {
+        font-size: 34px;
+      }
+    }
+  }
+}

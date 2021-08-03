@@ -21,25 +21,6 @@
       }
     }
 
-    .view-button {
-      @include pos-center-x;
-      bottom: 10%;
-      flex-shrink: 0;
-
-      .btn-transparent {
-        padding: 9px 16px;
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: -0.01em;
-        flex-grow: 1;
-        white-space: nowrap;
-
-        .ic-chevron {
-          font-size: 22px;
-        }
-      }
-    }
-
     &.page-01 {
       background-image: url('./assets/images/img-cover-01.jpg');
     }
@@ -69,20 +50,6 @@
 
         .explain-detail {
           @include text-style(24);
-        }
-      }
-
-      .view-button {
-        .btn-transparent {
-          padding: 20px 32px;
-          font-size: 24px;
-          line-height: 34px;
-          letter-spacing: -0.01em;
-          word-spacing: nowrap;
-
-          .ic-chevron {
-            font-size: 34px;
-          }
         }
       }
     }
