@@ -98,15 +98,3 @@
     border-color: $yellow;
   }
 }
-
-.btn-transparent {
-  @include inline-flexbox;
-  font-family: $font-eng;
-  color: $white;
-  border: 1px solid $white;
-
-  .ic-chevron {
-    margin-left: 14px;
-    color: $white;
-  }
-}
