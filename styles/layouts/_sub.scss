@@ -1,0 +1,57 @@
+.sub {
+  position: absolute;
+  top: $gnb-height-sm + 24px;
+  width: 100%;
+  height: auto;
+
+  &-header {
+    margin-bottom: 36px;
+  }
+
+  &-title {
+    @include text-style(16, $dark);
+    font-weight: 700;
+  }
+
+  &-button-group {
+    @include flexbox;
+    margin-bottom: 24px;
+
+    button {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      @include text-style(12, $white);
+    }
+    .filter-button {
+      margin-right: 20px;
+      background-color: $yellow;
+    }
+
+    .search-button {
+      background-color: $teritory;
+    }
+
+    i {
+      display: block;
+      font-size: 32px;
+    }
+  }
+
+  @include responsive(T) {
+    top: $gnb-height-md + 40px;
+
+    &-header {
+      @include flexbox(between);
+      margin-bottom: 40px;
+    }
+
+    &-title {
+      @include text-style(24);
+    }
+
+    &-search {
+      width: 312px;
+    }
+  }
+}
