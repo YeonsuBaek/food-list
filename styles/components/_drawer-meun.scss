@@ -1,4 +1,6 @@
 .drawer-menu {
+  $item-width-md: calc(100% / 4 - 3px);
+
   width: 100%;
   height: auto;
 
@@ -31,16 +33,11 @@
     margin-bottom: 8px;
   }
 
-  &-list {
-    margin-bottom: 10px;
-  }
-
   &-item {
     position: relative;
     @include flexbox(start);
     width: 100%;
     height: auto;
-    padding: 12px 16px;
 
     .menu-image {
       display: block;
@@ -57,6 +54,10 @@
         height: 100%;
         object-fit: cover;
       }
+    }
+
+    .item-wrapper {
+      @include flexbox(start);
     }
 
     .menu-wrapper {
@@ -114,9 +115,8 @@
       }
 
       &::after {
-        position: absolute;
-        top: 2px;
-        left: 1px;
+        margin-top: 2px;
+        margin-left: 1px;
         @include flexbox;
         content: '';
         width: 8px;
@@ -147,6 +147,52 @@
     .drawer-menu-content {
       display: block;
       visibility: visible;
+    }
+  }
+
+  @include responsive(T) {
+    &-button {
+      height: 50px;
+      padding: 0 20px;
+    }
+
+    &-content {
+      border: 1px solid $background;
+    }
+
+    &-select {
+      padding: 20px 40px;
+    }
+
+    .select-group {
+      @include inline-flexbox(start);
+
+      .form-select {
+        width: 180px;
+        margin-right: 10px;
+      }
+    }
+
+    &-item {
+      @include inline-flexbox;
+      width: $item-width-md;
+      max-width: 150px;
+
+      .menu-image {
+        width: 132px;
+        height: 132px * 0.75;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      input[type='checkbox'] {
+        position: static;
+        margin-right: 8px;
+      }
+    }
+
+    .item-wrapper {
+      display: block;
     }
   }
 }
