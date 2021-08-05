@@ -42,6 +42,28 @@
     font-size: 20px;
     color: $secondary;
   }
+
+  .ic-close {
+    font-size: 12px;
+    color: $white;
+  }
+
+  .delete-button {
+    display: none;
+    visibility: hidden;
+
+    &.is-active {
+      display: block;
+      @include pos-center-y;
+      right: 8px;
+      @include flexbox;
+      width: 16px;
+      height: 16px;
+      background-color: $secondary;
+      border-radius: 50%;
+      visibility: visible;
+    }
+  }
 }
 
 .select-group {
