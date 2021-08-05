@@ -14,10 +14,14 @@
 
       .explain-summery {
         @include text-style(24);
+        animation-name: text-slide-down;
+        animation-duration: 1500ms;
       }
 
       .explain-detail {
         @include text-style(12);
+        animation-name: text-slide-up;
+        animation-duration: 1500ms;
       }
     }
 
@@ -53,5 +57,29 @@
         }
       }
     }
+  }
+}
+
+@keyframes text-slide-down {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes text-slide-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
