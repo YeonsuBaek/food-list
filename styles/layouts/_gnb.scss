@@ -70,6 +70,13 @@ body {
         font-size: 20px;
         color: $primary;
       }
+
+      &:hover {
+        .ic-logo {
+          color: $yellow;
+          transition: color 200ms ease-in-out;
+        }
+      }
     }
   }
 }
