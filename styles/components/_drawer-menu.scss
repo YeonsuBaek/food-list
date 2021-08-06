@@ -17,6 +17,7 @@
       font-size: 24px;
       color: $secondary;
       transform: rotate(90deg);
+      transition: transform 200ms ease-in-out;
     }
   }
 

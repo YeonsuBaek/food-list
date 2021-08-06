@@ -1,7 +1,18 @@
 .filter {
   &-sidebar {
     $sidebar-width: 240px;
-    $sidebar-header-height: 36px;
+    $sidebar-height: 36px;
+    $kinds-length: 10;
+    $address-length: 3;
+    $ages-length: 5;
+    $gender-length: 2;
+    $personnel-length: 5;
+    $atmosp-length: 10;
+    $etc-length: 7;
+
+    @function _calculate-max-content-height($length) {
+      @return $sidebar-height * $length;
+    }
 
     position: fixed;
     top: 0;
@@ -14,10 +25,70 @@
     transition: transform 300ms ease-in-out;
     overscroll-behavior: contain;
 
+    .drawer-menu {
+      &-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 200ms ease-in-out;
+      }
+
+      &-item {
+        height: $sidebar-height;
+      }
+
+      &.is-open {
+        &.is-kinds {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($kinds-length);
+          }
+        }
+
+        &.is-address {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($address-length);
+          }
+        }
+
+        &.is-ages {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($ages-length);
+          }
+        }
+
+        &.is-gender {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($gender-length);
+          }
+        }
+
+        &.is-personnel {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($personnel-length);
+          }
+        }
+
+        &.is-atmosp {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($atmosp-length);
+          }
+        }
+
+        &.is-etc {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($etc-length);
+          }
+        }
+      }
+    }
+
+    &.is-active {
+      transform: translate3d(calc(100vw - #{$sidebar-width}), 0, 0);
+    }
+
     .filter-header {
       @include flexbox(between);
       width: 100%;
-      height: $sidebar-header-height;
+      height: $sidebar-height;
 
       padding: 0 12px;
       background-color: $yellow;
@@ -46,10 +117,6 @@
       }
     }
 
-    &.is-active {
-      transform: translate3d(calc(100vw - #{$sidebar-width}), 0, 0);
-    }
-
     &::-webkit-scrollbar {
       display: none;
     }
@@ -57,7 +124,7 @@
 
   &-checkbox {
     .drawer-menu-item {
-      padding: 8px 16px;
+      padding: 0 16px;
     }
   }
 }
