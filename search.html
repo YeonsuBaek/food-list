@@ -117,7 +117,11 @@
                   type="text"
                   placeholder="매장, 메뉴 등을 검색하세요"
                 />
-                <button class="delete-button" type="button">
+                <button
+                  class="delete-button"
+                  type="button"
+                  aria-label="입력한 문자 지우기"
+                >
                   <i class="ic-close" aria-hidden></i>
                 </button>
               </div>
@@ -134,10 +138,955 @@
                 검색하기
               </button>
             </div>
+
+            <div class="filter sm-hidden">
+              <div class="drawer-menu filter-checkbox is-open">
+                <button class="drawer-menu-button" type="button">
+                  종류
+                  <i class="ic-chevron"></i>
+                </button>
+
+                <div class="drawer-menu-content">
+                  <ul class="drawer-menu-list">
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-01"
+                        name="kinds"
+                        value="한식"
+                      />
+                      <label for="kinds-01">한식</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-02"
+                        name="kinds"
+                        value="분식"
+                      />
+                      <label for="kinds-02">분식</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-03"
+                        name="kinds"
+                        value="중식"
+                      />
+                      <label for="kinds-03">중식</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-04"
+                        name="kinds"
+                        value="일식"
+                      />
+                      <label for="kinds-04">일식</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-05"
+                        name="kinds"
+                        value="양식"
+                      />
+                      <label for="kinds-5">양식</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-06"
+                        name="kinds"
+                        value="아시아음식"
+                      />
+                      <label for="kinds-06">아시아음식</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-07"
+                        name="kinds"
+                        value="야식"
+                      />
+                      <label for="kinds-07">야식</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-05"
+                        name="kinds"
+                        value="카페디저트"
+                      />
+                      <label for="kinds-05">카페/디저트</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-06"
+                        name="kinds"
+                        value="치킨피자"
+                      />
+                      <label for="kinds-06">치킨/피자</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="kinds-07"
+                        name="kinds"
+                        value="패스트푸드"
+                      />
+                      <label for="kinds-07">패스트푸드</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="drawer-menu is-open">
+                <button class="drawer-menu-button" type="button">
+                  주소
+                  <i class="ic-chevron"></i>
+                </button>
+
+                <div class="drawer-menu-content">
+                  <div class="drawer-menu-select">
+                    <div class="select-group is-active">
+                      <select class="form-select">
+                        <option value="1">시, 도</option>
+                        <option value="2">선택사항2</option>
+                        <option value="3">선택사항3</option>
+                        <option value="4">선택사항4</option>
+                        <option value="5">선택사항5</option>
+                      </select>
+                      <i class="ic-caret" aria-hidden></i>
+                    </div>
+
+                    <div class="select-group">
+                      <select class="form-select">
+                        <option value="value1">시, 군, 구</option>
+                        <option value="value2">value2</option>
+                        <option value="value3">value3</option>
+                        <option value="value4">value4</option>
+                      </select>
+                      <i class="ic-caret"></i>
+                    </div>
+
+                    <div class="select-group">
+                      <select class="form-select">
+                        <option value="value1">동, 읍, 면</option>
+                        <option value="value2">value2</option>
+                        <option value="value3">value3</option>
+                        <option value="value4">value4</option>
+                      </select>
+                      <i class="ic-caret"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="drawer-menu filter-checkbox is-open">
+                <button class="drawer-menu-button" type="button">
+                  나이
+                  <i class="ic-chevron"></i>
+                </button>
+
+                <div class="drawer-menu-content">
+                  <ul class="drawer-menu-list">
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="ages-01"
+                        name="ages"
+                        value="어린이"
+                      />
+                      <label for="ages-01">어린이</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="ages-02"
+                        name="ages"
+                        value="10대"
+                      />
+                      <label for="ages-02">10대</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="ages-03"
+                        name="ages"
+                        value="20대"
+                      />
+                      <label for="ages-03">20대</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="ages-04"
+                        name="ages"
+                        value="30대"
+                      />
+                      <label for="ages-04">30대</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="ages-05"
+                        name="ages"
+                        value="40대"
+                      />
+                      <label for="ages-5">40대</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="ages-06"
+                        name="ages"
+                        value="50대"
+                      />
+                      <label for="ages-06">50대</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="ages-07"
+                        name="ages"
+                        value="60대이상"
+                      />
+                      <label for="ages-07">60대 이상</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="drawer-menu filter-checkbox is-open">
+                <button class="drawer-menu-button" type="button">
+                  성별
+                  <i class="ic-chevron"></i>
+                </button>
+
+                <div class="drawer-menu-content">
+                  <ul class="drawer-menu-list">
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="gender-01"
+                        name="gender"
+                        value="여자"
+                      />
+                      <label for="gender-01">여자</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="gender-02"
+                        name="gender"
+                        value="남자"
+                      />
+                      <label for="gender-02">남자</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="drawer-menu filter-checkbox is-open">
+                <button class="drawer-menu-button" type="button">
+                  인원
+                  <i class="ic-chevron"></i>
+                </button>
+
+                <div class="drawer-menu-content">
+                  <ul class="drawer-menu-list">
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="personnel-01"
+                        name="personnel"
+                        value="1명"
+                      />
+                      <label for="personnel-01">1명</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="personnel-02"
+                        name="personnel"
+                        value="2명"
+                      />
+                      <label for="personnel-02">2명</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="personnel-3"
+                        name="personnel"
+                        value="3명이상4명이하"
+                      />
+                      <label for="personnel-03">3~4명</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="personnel-04"
+                        name="personnel"
+                        value="5명이상9명이하"
+                      />
+                      <label for="personnel-04">5~9명</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="personnel-05"
+                        name="personnel"
+                        value="10명이상"
+                      />
+                      <label for="personnel-05">10명 이상</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="drawer-menu filter-checkbox is-open">
+                <button class="drawer-menu-button" type="button">
+                  분위기
+                  <i class="ic-chevron"></i>
+                </button>
+
+                <div class="drawer-menu-content">
+                  <ul class="drawer-menu-list">
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-01"
+                        name="atmosp"
+                        value="조용한"
+                      />
+                      <label for="atmosp-01">조용한</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-02"
+                        name="atmosp"
+                        value="인스타감성"
+                      />
+                      <label for="atmosp-02">인스타 감성</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-3"
+                        name="atmosp"
+                        value="어두운"
+                      />
+                      <label for="atmosp-03">어두운</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-04"
+                        name="atmosp"
+                        value="시끌벅적한"
+                      />
+                      <label for="atmosp-04">시끌벅적한</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-05"
+                        name="atmosp"
+                        value="데이트하기좋은"
+                      />
+                      <label for="atmosp-05">데이트하기 좋은</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-06"
+                        name="atmosp"
+                        value="넓은"
+                      />
+                      <label for="atmosp-06">넓은</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-07"
+                        name="atmosp"
+                        value="모던한"
+                      />
+                      <label for="atmosp-07">모던한</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-08"
+                        name="atmosp"
+                        value="공부하기좋은"
+                      />
+                      <label for="atmosp-08">공부하기 좋은</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-09"
+                        name="atmosp"
+                        value="분리된"
+                      />
+                      <label for="atmosp-09">분리된</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="atmosp-10"
+                        name="atmosp"
+                        value="복층"
+                      />
+                      <label for="atmosp-10">복층</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="drawer-menu filter-checkbox is-open">
+                <button class="drawer-menu-button" type="button">
+                  기타
+                  <i class="ic-chevron"></i>
+                </button>
+
+                <div class="drawer-menu-content">
+                  <ul class="drawer-menu-list">
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="etc-01"
+                        name="etc"
+                        value="비건"
+                      />
+                      <label for="atmosp-01">비건</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="etc-02"
+                        name="etc"
+                        value="스타셰프 운영"
+                      />
+                      <label for="etc-02">스타셰프 운영</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="etc-3"
+                        name="etc"
+                        value="방송출연"
+                      />
+                      <label for="etc-03">방송출연</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="etc-04"
+                        name="etc"
+                        value="반려동물출입가능"
+                      />
+                      <label for="etc-04">반려동물 출입가능</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="etc-05"
+                        name="etc"
+                        value="휴대폰충전가능"
+                      />
+                      <label for="-05">휴대폰 충전가능</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="etc-06"
+                        name="etc"
+                        value="화장실 성별분리"
+                      />
+                      <label for="etc-06">화장실 성별분리</label>
+                    </li>
+                    <li class="drawer-menu-item">
+                      <input
+                        type="checkbox"
+                        id="etc-07"
+                        name="etc"
+                        value="이벤트진행"
+                      />
+                      <label for="etc-07">이벤트 진행</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    <aside class="filter-sidebar is-active sm-only">
+      <header class="filter-header">
+        <h1>필터</h1>
+        <div class="button-group">
+          <i class="ic-reset" aria-label="필터 설정 초기화 버튼"></i>
+          <i class="ic-close" aria-label="필터창 닫기 버튼"></i>
+        </div>
+      </header>
+
+      <div class="filter-body">
+        <div class="drawer-menu filter-checkbox is-open">
+          <button class="drawer-menu-button" type="button">
+            종류
+            <i class="ic-chevron"></i>
+          </button>
+
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-01"
+                  name="kinds"
+                  value="한식"
+                />
+                <label for="kinds-01">한식</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-02"
+                  name="kinds"
+                  value="분식"
+                />
+                <label for="kinds-02">분식</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-03"
+                  name="kinds"
+                  value="중식"
+                />
+                <label for="kinds-03">중식</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-04"
+                  name="kinds"
+                  value="일식"
+                />
+                <label for="kinds-04">일식</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-05"
+                  name="kinds"
+                  value="양식"
+                />
+                <label for="kinds-5">양식</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-06"
+                  name="kinds"
+                  value="아시아음식"
+                />
+                <label for="kinds-06">아시아음식</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-07"
+                  name="kinds"
+                  value="야식"
+                />
+                <label for="kinds-07">야식</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-05"
+                  name="kinds"
+                  value="카페디저트"
+                />
+                <label for="kinds-05">카페/디저트</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-06"
+                  name="kinds"
+                  value="치킨피자"
+                />
+                <label for="kinds-06">치킨/피자</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="kinds-07"
+                  name="kinds"
+                  value="패스트푸드"
+                />
+                <label for="kinds-07">패스트푸드</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="drawer-menu is-open">
+          <button class="drawer-menu-button" type="button">
+            주소
+            <i class="ic-chevron"></i>
+          </button>
+
+          <div class="drawer-menu-content">
+            <div class="drawer-menu-select">
+              <div class="select-group is-active">
+                <select class="form-select">
+                  <option value="1">시, 도</option>
+                  <option value="2">선택사항2</option>
+                  <option value="3">선택사항3</option>
+                  <option value="4">선택사항4</option>
+                  <option value="5">선택사항5</option>
+                </select>
+                <i class="ic-caret" aria-hidden></i>
+              </div>
+
+              <div class="select-group">
+                <select class="form-select">
+                  <option value="value1">시, 군, 구</option>
+                  <option value="value2">value2</option>
+                  <option value="value3">value3</option>
+                  <option value="value4">value4</option>
+                </select>
+                <i class="ic-caret"></i>
+              </div>
+
+              <div class="select-group">
+                <select class="form-select">
+                  <option value="value1">동, 읍, 면</option>
+                  <option value="value2">value2</option>
+                  <option value="value3">value3</option>
+                  <option value="value4">value4</option>
+                </select>
+                <i class="ic-caret"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="drawer-menu filter-checkbox is-open">
+          <button class="drawer-menu-button" type="button">
+            나이
+            <i class="ic-chevron"></i>
+          </button>
+
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="ages-01"
+                  name="ages"
+                  value="어린이"
+                />
+                <label for="ages-01">어린이</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input type="checkbox" id="ages-02" name="ages" value="10대" />
+                <label for="ages-02">10대</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input type="checkbox" id="ages-03" name="ages" value="20대" />
+                <label for="ages-03">20대</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input type="checkbox" id="ages-04" name="ages" value="30대" />
+                <label for="ages-04">30대</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input type="checkbox" id="ages-05" name="ages" value="40대" />
+                <label for="ages-5">40대</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input type="checkbox" id="ages-06" name="ages" value="50대" />
+                <label for="ages-06">50대</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="ages-07"
+                  name="ages"
+                  value="60대이상"
+                />
+                <label for="ages-07">60대 이상</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="drawer-menu filter-checkbox is-open">
+          <button class="drawer-menu-button" type="button">
+            성별
+            <i class="ic-chevron"></i>
+          </button>
+
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="gender-01"
+                  name="gender"
+                  value="여자"
+                />
+                <label for="gender-01">여자</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="gender-02"
+                  name="gender"
+                  value="남자"
+                />
+                <label for="gender-02">남자</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="drawer-menu filter-checkbox is-open">
+          <button class="drawer-menu-button" type="button">
+            인원
+            <i class="ic-chevron"></i>
+          </button>
+
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="personnel-01"
+                  name="personnel"
+                  value="1명"
+                />
+                <label for="personnel-01">1명</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="personnel-02"
+                  name="personnel"
+                  value="2명"
+                />
+                <label for="personnel-02">2명</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="personnel-3"
+                  name="personnel"
+                  value="3명이상4명이하"
+                />
+                <label for="personnel-03">3~4명</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="personnel-04"
+                  name="personnel"
+                  value="5명이상9명이하"
+                />
+                <label for="personnel-04">5~9명</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="personnel-05"
+                  name="personnel"
+                  value="10명이상"
+                />
+                <label for="personnel-05">10명 이상</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="drawer-menu filter-checkbox is-open">
+          <button class="drawer-menu-button" type="button">
+            분위기
+            <i class="ic-chevron"></i>
+          </button>
+
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-01"
+                  name="atmosp"
+                  value="조용한"
+                />
+                <label for="atmosp-01">조용한</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-02"
+                  name="atmosp"
+                  value="인스타감성"
+                />
+                <label for="atmosp-02">인스타 감성</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-3"
+                  name="atmosp"
+                  value="어두운"
+                />
+                <label for="atmosp-03">어두운</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-04"
+                  name="atmosp"
+                  value="시끌벅적한"
+                />
+                <label for="atmosp-04">시끌벅적한</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-05"
+                  name="atmosp"
+                  value="데이트하기좋은"
+                />
+                <label for="atmosp-05">데이트하기 좋은</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-06"
+                  name="atmosp"
+                  value="넓은"
+                />
+                <label for="atmosp-06">넓은</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-07"
+                  name="atmosp"
+                  value="모던한"
+                />
+                <label for="atmosp-07">모던한</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-08"
+                  name="atmosp"
+                  value="공부하기좋은"
+                />
+                <label for="atmosp-08">공부하기 좋은</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-09"
+                  name="atmosp"
+                  value="분리된"
+                />
+                <label for="atmosp-09">분리된</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="atmosp-10"
+                  name="atmosp"
+                  value="복층"
+                />
+                <label for="atmosp-10">복층</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="drawer-menu filter-checkbox is-open">
+          <button class="drawer-menu-button" type="button">
+            기타
+            <i class="ic-chevron"></i>
+          </button>
+
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <input type="checkbox" id="etc-01" name="etc" value="비건" />
+                <label for="atmosp-01">비건</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="etc-02"
+                  name="etc"
+                  value="스타셰프 운영"
+                />
+                <label for="etc-02">스타셰프 운영</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input type="checkbox" id="etc-3" name="etc" value="방송출연" />
+                <label for="etc-03">방송출연</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="etc-04"
+                  name="etc"
+                  value="반려동물출입가능"
+                />
+                <label for="etc-04">반려동물 출입가능</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="etc-05"
+                  name="etc"
+                  value="휴대폰충전가능"
+                />
+                <label for="-05">휴대폰 충전가능</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="etc-06"
+                  name="etc"
+                  value="화장실 성별분리"
+                />
+                <label for="etc-06">화장실 성별분리</label>
+              </li>
+              <li class="drawer-menu-item">
+                <input
+                  type="checkbox"
+                  id="etc-07"
+                  name="etc"
+                  value="이벤트진행"
+                />
+                <label for="etc-07">이벤트 진행</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
 
     <aside class="sidebar lg-hidden">
       <header class="sidebar-header">

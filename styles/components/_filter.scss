@@ -1,0 +1,63 @@
+.filter {
+  &-sidebar {
+    $sidebar-width: 240px;
+    $sidebar-header-height: 36px;
+
+    position: fixed;
+    top: 0;
+    width: $sidebar-width;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: $sidebar-level;
+    background-color: $white;
+    transform: translate3d(100vw, 0, 0);
+    transition: transform 300ms ease-in-out;
+    overscroll-behavior: contain;
+
+    .filter-header {
+      @include flexbox(between);
+      width: 100%;
+      height: $sidebar-header-height;
+
+      padding: 0 12px;
+      background-color: $yellow;
+
+      h1 {
+        @include text-style(16px, $white);
+        font-weight: 400;
+      }
+
+      .button-group {
+        i {
+          @include inline-flexbox;
+          font-size: 24px;
+          color: $white;
+        }
+
+        .ic-reset::after {
+          content: '';
+          width: 1px;
+          height: 16px;
+          margin-left: 5px;
+          margin-right: 2px;
+
+          background-color: $yellow-dark;
+        }
+      }
+    }
+
+    &.is-active {
+      transform: translate3d(calc(100vw - #{$sidebar-width}), 0, 0);
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-checkbox {
+    .drawer-menu-item {
+      padding: 8px 16px;
+    }
+  }
+}

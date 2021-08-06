@@ -29,7 +29,7 @@
     padding: 12px;
   }
 
-  .select-group {
+  .select-group:not(:last-child) {
     margin-bottom: 8px;
   }
 
@@ -174,7 +174,7 @@
     }
 
     &-item {
-      @include inline-flexbox;
+      @include inline-flexbox(start);
       width: $item-width-md;
       max-width: 150px;
 
