@@ -98,26 +98,22 @@
     }
 
     .button-group {
+      height: 100%;
+
+      button {
+        height: 100%;
+        padding-left: 2px;
+        padding-right: 5px;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
       i {
         @include inline-flexbox;
         font-size: 24px;
         color: $white;
-
-        &::before {
-          padding-left: 2px;
-          padding-right: 5px;
-        }
-
-        &:last-child::before {
-          padding-right: 0;
-        }
-
-        &:not(:last-child)::after {
-          content: '';
-          width: 1px;
-          height: 16px;
-          background-color: $yellow-dark;
-        }
       }
     }
   }

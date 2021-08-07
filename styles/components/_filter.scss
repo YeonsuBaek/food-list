@@ -15,64 +15,79 @@
       2 + $drawer-menu-item-margin * 4;
   }
 
-  margin-bottom: 40px;
+  &-button-group {
+    @include flexbox;
+    margin-bottom: 64px;
 
-  .drawer-menu {
-    &-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 200ms ease-in-out;
+    button {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
+  }
 
-    &-list {
-      padding: $drawer-menu-content-padding 40px;
-    }
+  &-group {
+    margin-bottom: 40px;
 
-    &-item {
-      height: $drawer-menu-item-height;
-      margin: #{$drawer-menu-item-margin} 0;
-    }
-
-    &.is-open {
-      &.is-kinds {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($kinds-length);
-        }
+    .drawer-menu {
+      &-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 200ms ease-in-out;
       }
 
-      &.is-address {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($address-length);
-        }
+      &-list {
+        padding: $drawer-menu-content-padding 40px;
       }
 
-      &.is-ages {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($ages-length);
-        }
+      &-item {
+        height: $drawer-menu-item-height;
+        margin: #{$drawer-menu-item-margin} 0;
       }
 
-      &.is-gender {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($gender-length);
+      &.is-open {
+        &.is-kinds {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($kinds-length);
+          }
         }
-      }
 
-      &.is-personnel {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($personnel-length);
+        &.is-address {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($address-length);
+          }
         }
-      }
 
-      &.is-atmosp {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($atmosp-length);
+        &.is-ages {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($ages-length);
+          }
         }
-      }
 
-      &.is-etc {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($etc-length);
+        &.is-gender {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($gender-length);
+          }
+        }
+
+        &.is-personnel {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($personnel-length);
+          }
+        }
+
+        &.is-atmosp {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($atmosp-length);
+          }
+        }
+
+        &.is-etc {
+          .drawer-menu-content {
+            max-height: _calculate-max-content-height($etc-length);
+          }
         }
       }
     }
