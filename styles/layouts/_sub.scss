@@ -5,16 +5,41 @@
   height: auto;
 
   &-header {
-    margin-bottom: 36px;
+    margin-bottom: 20px;
   }
 
   &-title {
+    display: block;
     @include text-style(16, $dark);
     font-weight: 700;
   }
 
+  &-summery {
+    @include flexbox(start);
+
+    .kinds {
+      margin-right: 4px;
+      @include text-style(13, $teritory);
+    }
+  }
+
+  .score-summery {
+    @include flexbox(start);
+
+    .star-rating {
+      margin-right: 4px;
+      font-size: 14px;
+    }
+
+    .badge {
+      @include text-style(13, $yellow);
+      font-weight: 700;
+    }
+  }
+
   &-button-group {
     @include flexbox;
+    margin-top: 16px;
     margin-bottom: 24px;
 
     button {
@@ -42,7 +67,7 @@
     top: $gnb-height-md + 40px;
 
     &-header {
-      @include flexbox(between);
+      @include flexbox(between, start);
       margin-bottom: 40px;
     }
 
