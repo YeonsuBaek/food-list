@@ -10,6 +10,10 @@
   }
 }
 
+.star-rating {
+  @extend %star-rating-base;
+}
+
 .star-rating-13 {
   @extend %star-rating-base;
   font-size: 13px;
