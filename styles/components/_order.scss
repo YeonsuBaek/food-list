@@ -1,0 +1,209 @@
+.order {
+  margin-bottom: 40px;
+
+  &-header {
+    @include flexbox(between);
+    height: 36px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $border;
+
+    &-total {
+      @include text-style(12, $primary);
+      font-weight: 400;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    &-content {
+      height: 100%;
+    }
+
+    &-list {
+      @include flexbox(end);
+      height: 100%;
+    }
+
+    &-item {
+      @include flexbox;
+      height: 100%;
+      padding-right: 4px;
+      @include text-style(12, $secondary);
+      font-weight: 400;
+    }
+
+    &-item.is-active {
+      color: $yellow;
+    }
+
+    &-item:not(:last-child):after {
+      margin-left: 4px;
+      content: '|';
+      font-size: 10px;
+      color: $border;
+    }
+  }
+
+  &-item {
+    @include flexbox(start);
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &-store-image {
+    width: 58px;
+    height: 58px;
+    margin-right: 10px;
+    overflow: hidden;
+    border-radius: 4px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-wrapper {
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-store-title {
+    @include text-style(13, $dark);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-store-summery {
+    @include text-style(12, $primary);
+    font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .score-summery {
+    @include flexbox(start);
+
+    .star-rating-16 {
+      margin-right: 4px;
+    }
+
+    .badge {
+      @include text-style(12, $yellow);
+      font-weight: 700;
+    }
+  }
+
+  @include responsive(T) {
+    margin-bottom: 80px;
+
+    &-header {
+      height: 44px;
+      margin-bottom: 40px;
+    }
+
+    &-item {
+      margin-bottom: 20px;
+    }
+
+    &-store-image {
+      width: 198px;
+      height: 148px;
+      margin-right: 20px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-shop-tag {
+      @include text-style(13, $secondary);
+    }
+
+    &-store-title {
+      @include text-style(24, $dark);
+      font-weight: 700;
+    }
+
+    &-store-summery {
+      display: block;
+      @include text-style(16, $primary);
+      margin-bottom: 4px;
+    }
+
+    .button-group {
+      @include flexbox(end);
+      margin: 0 20px;
+
+      .bookmark-button:hover {
+        background-color: $yellow;
+
+        .ic-bookmark:before {
+          @include flexbox;
+          content: '찜하기';
+          @include text-style(13px, $white);
+          font-weight: 700;
+        }
+      }
+
+      .review-button:hover {
+        background-color: $yellow;
+
+        .ic-comment:before {
+          @include flexbox;
+          content: '리뷰쓰기';
+          @include text-style(13px, $white);
+          font-weight: 700;
+        }
+      }
+
+      button {
+        width: 72px;
+        height: 72px;
+        background-color: $border;
+        border-radius: 50%;
+      }
+
+      i {
+        @include flexbox;
+        font-size: 36px;
+        color: $white;
+      }
+
+      button:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-store-image {
+      width: 265px;
+      height: 198px;
+    }
+
+    &-store-summery {
+      margin-bottom: 10px;
+    }
+
+    .button-group {
+      margin: 0 40px;
+    }
+  }
+}
