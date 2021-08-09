@@ -21,11 +21,6 @@
     }
   }
 
-  &-content {
-    display: none;
-    visibility: hidden;
-  }
-
   &-select {
     padding: 12px;
   }
@@ -36,7 +31,7 @@
 
   &-item {
     position: relative;
-    @include flexbox(start);
+    // @include flexbox(start);
     width: 100%;
     height: auto;
 
@@ -143,11 +138,6 @@
       i {
         transform: rotate(-90deg);
       }
-    }
-
-    .drawer-menu-content {
-      display: block;
-      visibility: visible;
     }
   }
 
