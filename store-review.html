@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      도미노피자 서수원점 - REVIEW | FOOD LIST - 매 끼니가 소중한 당신에게
+    </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f2b705" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="gnb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h1 class="logo">
+              <a href="./index.html" aria-label="홈으로 가기">
+                <i class="ic-logo"></i>
+              </a>
+            </h1>
+            <div class="gnb-wrapper">
+              <div class="gnb-left">
+                <nav class="gnb-nav lg-only">
+                  <h2 class="visually-hidden">메뉴</h2>
+                  <ul class="gnb-nav-list">
+                    <li class="gnb-nav-item is-active">
+                      <a href="./search.html"> SEARCH </a>
+                    </li>
+                    <li class="gnb-nav-item">
+                      <a href="#"> POST </a>
+                    </li>
+                    <li class="gnb-nav-item">
+                      <a href="#"> EVENT </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <button
+                  class="gnb-menu-button lg-hidden"
+                  type="button"
+                  aria-label="메뉴 펼치기"
+                >
+                  <i class="ic-menu"></i>
+                </button>
+              </div>
+
+              <div class="gnb-right">
+                <!-- NOTE: 로그인을 한 경우 -->
+                <div class="my-menu sm-hidden">
+                  <button
+                    class="my-menu-button"
+                    type="button"
+                    aria-label="마이메뉴 열기"
+                  >
+                    <img src="./assets/images/img-user-01.jpg" alt="엄기준" />
+                  </button>
+
+                  <div class="my-menu-content">
+                    <ul class="my-menu-list">
+                      <li class="my-menu-item">
+                        <a href="#">알림</a>
+                      </li>
+                      <li class="my-menu-item">
+                        <a href="#">마이페이지</a>
+                      </li>
+                      <li class="my-menu-item">
+                        <a href="#">찜 목록</a>
+                      </li>
+                      <li class="my-menu-item">
+                        <a href="#">리뷰 목록</a>
+                      </li>
+                      <li class="my-menu-item">
+                        <button type="button">로그아웃</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- NOTE: 로그인을 하지 않은 경우 -->
+                <!-- <div class="gnb-nav-item lg-only">
+                  <a href="#"> LOGIN </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="sub">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <header class="sub-header">
+              <div class="sub-wrapper">
+                <h1 class="sub-title">도미노피자 서수원점</h1>
+                <div class="sub-summery">
+                  <span class="kinds">치킨/피자</span>
+                  <div class="score-summery">
+                    <div class="star-rating">
+                      <i class="ic-star is-active"></i>
+                      <i class="ic-star is-active"></i>
+                      <i class="ic-star is-active"></i>
+                      <i class="ic-star is-active"></i>
+                      <i class="ic-star is-active"></i>
+                    </div>
+                    <div class="badge">30</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sub-search input-group sm-hidden">
+                <i class="ic-search" aria-hidden></i>
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder="메뉴를 검색하세요"
+                />
+                <button
+                  class="delete-button"
+                  type="button"
+                  aria-label="입력한 문자 지우기"
+                >
+                  <i class="ic-close" aria-hidden></i>
+                </button>
+              </div>
+            </header>
+          </div>
+        </div>
+      </div>
+
+      <div class="store">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-3">
+              <div class="store-image">
+                <img
+                  src="./assets/images/img-store-01.jpg"
+                  alt="도미노피자 서수원점"
+                />
+                <i class="ic-bookmark" aria-label="북마크 버튼"></i>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-8 col-lg-9">
+              <div class="store-info">
+                <dl class="store-info-list">
+                  <div class="store-info-item">
+                    <dt>주소</dt>
+                    <dd>
+                      경기 수원시 권선구 호매실로218번길 122 <br />
+                      (우)16402 <br />
+                      (지번) 호매실동 1375-2
+                    </dd>
+                  </div>
+                  <div class="store-info-item">
+                    <dt>영업시간</dt>
+                    <dd>매일 11:30 ~ 22:00</dd>
+                  </div>
+                  <div class="store-info-item">
+                    <dt>전화</dt>
+                    <dd>
+                      <a href="tel:0312983082"> 031-298-3082 </a>
+                    </dd>
+                  </div>
+                  <div class="store-info-item">
+                    <dt>홈페이지</dt>
+                    <dd>
+                      <a href="https://web.dominos.co.kr" target="_blank"
+                        >https://web.dominos.co.kr</a
+                      >
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="store-tab">
+              <ul class="store-tab-list">
+                <li class="store-tab-item">
+                  <a href="./store.html">MENU</a>
+                </li>
+                <li class="store-tab-item">
+                  <a class="sm-only" href="./store-info.html">INFO</a>
+                  <a class="sm-hidden" href="./store-info.html">INFORMATION</a>
+                </li>
+                <li class="store-tab-item is-active">
+                  <a href="./store-review.html">REVIEW</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="review-scoreboard">
+              <div class="score-summery">
+                <strong class="average-score" aria-label="평점 4.8">4.8</strong>
+                <div class="star-rating">
+                  <i class="ic-star is-active"></i>
+                  <i class="ic-star is-active"></i>
+                  <i class="ic-star is-active"></i>
+                  <i class="ic-star is-active"></i>
+                  <i class="ic-star is-active"></i>
+                </div>
+              </div>
+
+              <div class="score-summery">
+                <dl class="score-stats-list">
+                  <div class="score-stats-item">
+                    <dt>5점</dt>
+                    <dd>
+                      <div class="bar-graph" aria-hidden>
+                        <div class="active-graph"></div>
+                      </div>
+                      <strong class="count" aria-label="467명">467</strong>
+                    </dd>
+                  </div>
+
+                  <div class="score-stats-item">
+                    <dt>4점</dt>
+                    <dd>
+                      <div class="bar-graph" aria-hidden>
+                        <div class="active-graph"></div>
+                      </div>
+                      <strong class="count" aria-label="87명">87</strong>
+                    </dd>
+                  </div>
+
+                  <div class="score-stats-item">
+                    <dt>3점</dt>
+                    <dd>
+                      <div class="bar-graph" aria-hidden>
+                        <div class="active-graph"></div>
+                      </div>
+                      <strong class="count" aria-label="13명">13</strong>
+                    </dd>
+                  </div>
+
+                  <div class="score-stats-item">
+                    <dt>2점</dt>
+                    <dd>
+                      <div class="bar-graph" aria-hidden>
+                        <div class="active-graph"></div>
+                      </div>
+                      <strong class="count" aria-label="0명">0</strong>
+                    </dd>
+                  </div>
+
+                  <div class="score-stats-item">
+                    <dt>1점</dt>
+                    <dd>
+                      <div class="bar-graph" aria-hidden>
+                        <div class="active-graph"></div>
+                      </div>
+                      <strong class="count" aria-label="0명">0</strong>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar lg-hidden">
+      <header class="sidebar-header">
+        <h1 class="logo is-active">
+          <a href="#" aria-label="홈으로 가기">
+            <i class="ic-logo"></i>
+          </a>
+        </h1>
+
+        <!-- NOTE: 로그인을 한 경우 -->
+        <div class="sidebar-user">
+          <a href="#">
+            <div class="avatar-24">
+              <img src="./assets/images/img-user-01.jpg" alt="엄기준" />
+            </div>
+            <strong class="user-name">엄기준</strong>
+          </a>
+        </div>
+
+        <!-- NOTE: 로그인을 하지 않은 경우 -->
+        <!-- <div class="sidebar-auth">
+            <a class="btn-outlined btn-32" href="#">로그인</a>
+            <a class="btn-primary btn-32" href="#">회원가입</a>
+          </div> -->
+      </header>
+
+      <nav class="sidebar-nav">
+        <h2 class="visually-hidden">메뉴</h2>
+
+        <div class="sidebar-menu">
+          <ul class="sidebar-menu-list">
+            <li class="sidebar-menu-item is-active">
+              <a href="#">SEARCH</a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#">POST</a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#">EVENT</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- NOTE: 로그인을 한 경우 -->
+        <div class="sidebar-user-menu">
+          <ul class="user-menu-list">
+            <li class="user-menu-item is-active">
+              <a href="#">
+                알림
+                <i class="ic-new" aria-label="새로운 알림"></i>
+              </a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">마이페이지</a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">찜 목록</a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">리뷰 목록</a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">나의 리뷰</a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">로그아웃</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <div class="overlay" aria-hidden></div>
+  </body>
+</html>
