@@ -52,4 +52,10 @@
       margin-bottom: 0;
     }
   }
+
+  @include responsive(T) {
+    &-group {
+      margin-bottom: 180px;
+    }
+  }
 }
