@@ -31,7 +31,7 @@
 
   &-item {
     position: relative;
-    // @include flexbox(start);
+    @include flexbox(start);
     width: 100%;
     height: auto;
 
