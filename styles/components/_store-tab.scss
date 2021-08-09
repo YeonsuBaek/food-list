@@ -19,12 +19,12 @@
     &.is-active {
       border-color: $yellow;
 
-      button {
+      a {
         color: $yellow;
       }
     }
 
-    button {
+    a {
       @include pos-center;
       font-family: $font-eng;
       font-size: 13px;
@@ -45,7 +45,7 @@
         margin-right: 0;
       }
 
-      button {
+      a {
         font-size: 14px;
         line-height: 24px;
       }
@@ -57,7 +57,7 @@
       height: 40px;
 
       &:hover {
-        button {
+        a {
           color: $yellow;
         }
       }
