@@ -15,7 +15,8 @@
       .explain-summery {
         @include text-style(24);
         animation-name: text-slide-down;
-        animation-duration: 1500ms;
+        animation-duration: 2000ms;
+        animation-delay: 30ms;
       }
 
       .explain-detail {
