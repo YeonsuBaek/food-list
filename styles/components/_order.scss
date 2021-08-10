@@ -1,6 +1,12 @@
 .order {
   margin-bottom: 40px;
 
+  &-review {
+    .order-header {
+      margin-bottom: 0;
+    }
+  }
+
   &-header {
     @include flexbox(between);
     height: 36px;

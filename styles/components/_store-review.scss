@@ -1,0 +1,57 @@
+.store-review {
+  .review-item {
+    padding: 20px 0;
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .review-card {
+    @include flexbox(center, start);
+    flex-direction: column;
+
+    &-header {
+      order: 1;
+    }
+
+    &-image-group {
+      order: 2;
+    }
+
+    &-body {
+      order: 3;
+    }
+
+    &-footer {
+      order: 4;
+    }
+  }
+
+  @include responsive(T) {
+    margin-bottom: 180px;
+
+    .review-card {
+      @include flexbox(between, start);
+      flex-direction: row;
+
+      &-wrapper {
+        width: 60%;
+      }
+
+      &-image-group {
+        width: 40%;
+        order: 4;
+      }
+
+      &-body {
+        order: 2;
+      }
+
+      &-footer {
+        order: 3;
+      }
+    }
+  }
+}
