@@ -1,0 +1,89 @@
+.selected-menu {
+  $header-height-sm: 50px;
+  $list-padding-sm: 16px;
+  $item-height-sm: 60px;
+  $item-margin-sm: 8px;
+  $item-count: 2;
+
+  $max-height-sm: #{$list-padding-sm * 2 + $item-height-sm * $item-count +
+    $item-margin-sm * ($item-count - 1) + 32px + $header-height-sm};
+
+  &-header {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: $header-height-sm;
+    z-index: $selected-header-level;
+    background-color: $background;
+
+    .selected-menu-total {
+      @include pos-center;
+
+      strong {
+        @include text-style(16, $dark);
+        font-weight: 700;
+      }
+    }
+
+    .flip-button {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      @include flexbox;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $border;
+      border-radius: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transition: transform 200ms ease-in-out;
+
+      &.is-active {
+        transform: translateY(-50%) rotate(90deg);
+      }
+
+      i {
+        font-size: 16px;
+        color: $border;
+      }
+    }
+  }
+
+  &-body {
+    position: fixed;
+    bottom: $header-height-sm;
+    width: 100%;
+    background-color: $background;
+    max-height: 0;
+    z-index: $selected-body-level;
+    transition: max-height 200ms ease-in-out;
+
+    &.is-active {
+      max-height: $max-height-sm;
+    }
+
+    .select-menu-list {
+      @include flexbox;
+      flex-direction: column-reverse;
+      padding: #{$list-padding-sm} 0;
+    }
+
+    .select-menu-item {
+      width: 100%;
+      margin-bottom: $item-margin-sm;
+      background-color: $white;
+      border-radius: 4px;
+    }
+  }
+
+  .button-group {
+    @include flexbox;
+
+    button {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

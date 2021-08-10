@@ -1,0 +1,48 @@
+.menu-card {
+  position: relative;
+  padding: 8px 12px;
+
+  .top {
+    @include flexbox(between, start);
+    margin-bottom: 8px;
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: (20px + 12px);
+      height: (20px + 8px);
+
+      i {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .bottom {
+    @include flexbox(between);
+  }
+
+  .menu-title {
+    @include text-style(13, $primary);
+    font-weight: 400;
+  }
+
+  button {
+    i {
+      font-size: 20px;
+      color: $secondary;
+    }
+  }
+
+  .select-group {
+    width: 72px;
+  }
+
+  .menu-price {
+    @include text-style(14, $dark);
+    font-weight: 700;
+  }
+}
