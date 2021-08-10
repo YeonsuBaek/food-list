@@ -34,11 +34,11 @@
 
 .btn-secondary {
   @extend %btn-base;
-  background-color: $secondary;
+  background-color: $teritory;
   transition: background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: $primary;
+    background-color: $secondary;
   }
 }
 
@@ -78,7 +78,7 @@
 
 .btn-32 {
   height: 32px;
-  padding: 0 10px;
+  padding: 0 14px;
   @include text-style(14);
 }
 
