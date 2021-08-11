@@ -1,14 +1,22 @@
 .selected-menu {
   $header-height-sm: 50px;
+  $header-height-md: 100px;
   $list-padding-sm: 16px;
+  $list-padding-md: 30px;
   $item-height-sm: 60px;
+  $item-height-md: 80px;
   $item-margin-sm: 8px;
+  $item-margin-md: 10px;
   $item-count: 2;
 
   $max-height-sm: #{$list-padding-sm * 2 + $item-height-sm * $item-count +
     $item-margin-sm * ($item-count - 1) + 32px + $header-height-sm};
 
+  $max-height-md: #{$list-padding-md * 2 + $item-height-md * $item-count +
+    $item-margin-md * ($item-count - 1) + $header-height-md};
+
   &-header {
+    @include flexbox;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -17,33 +25,11 @@
     background-color: $background;
 
     .selected-menu-total {
-      @include pos-center;
+      @include flexbox;
 
       strong {
         @include text-style(16, $dark);
         font-weight: 700;
-      }
-    }
-
-    .flip-button {
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      @include flexbox;
-      width: 24px;
-      height: 24px;
-      border: 1px solid $border;
-      border-radius: 50%;
-      transform: translateY(-50%) rotate(-90deg);
-      transition: transform 200ms ease-in-out;
-
-      &.is-active {
-        transform: translateY(-50%) rotate(90deg);
-      }
-
-      i {
-        font-size: 16px;
-        color: $border;
       }
     }
   }
@@ -73,6 +59,29 @@
       background-color: $white;
       border-radius: 4px;
     }
+
+    .flip-button {
+      position: absolute;
+      top: -40px;
+      left: 20px;
+      @include flexbox;
+      width: 36px;
+      height: 36px;
+      border: 1px solid $border;
+      background-color: $white;
+      border-radius: 50%;
+      transform: rotate(-90deg);
+      transition: transform 200ms ease-in-out;
+
+      &.is-active {
+        transform: rotate(90deg);
+      }
+
+      i {
+        font-size: 24px;
+        color: $border;
+      }
+    }
   }
 
   .button-group {
@@ -83,6 +92,52 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-header {
+      @include flexbox;
+      height: $header-height-md;
+
+      .selected-menu-total {
+        @include flexbox(end, end);
+        flex-direction: column;
+
+        strong {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .header-wrapper {
+      @include flexbox(between);
+    }
+
+    &-body {
+      bottom: $header-height-md;
+
+      &.is-active {
+        max-height: $max-height-md;
+      }
+    }
+
+    .select-menu-list {
+      padding: #{$list-padding-md} 0;
+    }
+
+    .select-menu-item {
+      margin-bottom: $item-margin-md;
+    }
+
+    .flip-button {
+      top: -60px;
+      width: 50px;
+      height: 50px;
+
+      i {
+        font-size: 30px;
       }
     }
   }

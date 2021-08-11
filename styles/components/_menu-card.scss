@@ -31,7 +31,7 @@
   }
 
   button {
-    i {
+    .ic-close {
       font-size: 20px;
       color: $secondary;
     }
@@ -44,5 +44,15 @@
   .menu-price {
     @include text-style(14, $dark);
     font-weight: 700;
+  }
+
+  @include responsive(T) {
+    .menu-title {
+      @include text-style(16);
+    }
+
+    .menu-price {
+      @include text-style(18);
+    }
   }
 }
