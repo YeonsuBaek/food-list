@@ -1,0 +1,99 @@
+.login {
+  @include flexbox;
+  flex-direction: column;
+
+  &-header {
+    @include flexbox;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid $yellow;
+    @include text-style(24, $primary);
+    font-weight: 700;
+  }
+
+  .input-group {
+    margin-bottom: 10px;
+
+    input {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      margin-bottom: 4px;
+      @include text-style(12, $primary);
+      border: 1px solid $border;
+      border-radius: 4px;
+
+      &::placeholder {
+        @include text-style(12, $border);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .login-button {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    @include text-style(14, $white);
+    font-weight: 500;
+  }
+
+  .button-group {
+    @include flexbox;
+    @include text-style(12, $primary);
+
+    a {
+      padding-left: 10px;
+    }
+
+    a:not(:last-child):after {
+      content: '|';
+      padding-left: 10px;
+      @include text-style(12, $primary);
+    }
+  }
+
+  @include responsive(T) {
+    @include pos-center-x;
+    width: 360px;
+
+    &-header {
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+
+    .input-group {
+      input {
+        @include text-style(14);
+
+        &::placeholder {
+          @include text-style(14);
+        }
+      }
+    }
+
+    .login-button {
+      margin-bottom: 20px;
+      @include text-style(16);
+    }
+
+    .button-group {
+      @include text-style(14);
+
+      a {
+        padding-left: 20px;
+      }
+
+      a:not(:last-child):after {
+        padding-left: 20px;
+        @include text-style(14);
+      }
+    }
+  }
+}
