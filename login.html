@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      도미노피자 서수원점 - LOGIN | FOOD LIST - 매 끼니가 소중한 당신에게
+    </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f2b705" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="gnb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h1 class="logo">
+              <a href="./index.html" aria-label="홈으로 가기">
+                <i class="ic-logo"></i>
+              </a>
+            </h1>
+            <div class="gnb-wrapper">
+              <div class="gnb-left">
+                <nav class="gnb-nav lg-only">
+                  <h2 class="visually-hidden">메뉴</h2>
+                  <ul class="gnb-nav-list">
+                    <li class="gnb-nav-item">
+                      <a href="./search.html"> SEARCH </a>
+                    </li>
+                    <li class="gnb-nav-item">
+                      <a href="#"> POST </a>
+                    </li>
+                    <li class="gnb-nav-item">
+                      <a href="#"> EVENT </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <button
+                  class="gnb-menu-button lg-hidden"
+                  type="button"
+                  aria-label="메뉴 펼치기"
+                >
+                  <i class="ic-menu"></i>
+                </button>
+              </div>
+
+              <div class="gnb-right">
+                <!-- NOTE: 로그인을 한 경우 -->
+                <!-- <div class="my-menu sm-hidden">
+                  <button
+                    class="my-menu-button"
+                    type="button"
+                    aria-label="마이메뉴 열기"
+                  >
+                    <img src="./assets/images/img-user-01.jpg" alt="엄기준" />
+                  </button>
+
+                  <div class="my-menu-content">
+                    <ul class="my-menu-list">
+                      <li class="my-menu-item">
+                        <a href="#">알림</a>
+                      </li>
+                      <li class="my-menu-item">
+                        <a href="#">마이페이지</a>
+                      </li>
+                      <li class="my-menu-item">
+                        <a href="#">찜 목록</a>
+                      </li>
+                      <li class="my-menu-item">
+                        <a href="#">리뷰 목록</a>
+                      </li>
+                      <li class="my-menu-item">
+                        <button type="button">로그아웃</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+
+                <!-- NOTE: 로그인을 하지 않은 경우 -->
+                <div class="gnb-nav-item lg-only is-active">
+                  <a href="#"> LOGIN </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="sub">
+      <h1 class="login-header">로그인</h1>
+
+      <form class="login-body" action="#" method="GET">
+        <div class="input-group">
+          <input type="text" placeholder="아이디" />
+          <input type="password" placeholder="비밀번호" />
+        </div>
+
+        <button class="login-button" type="submit">로그인하기</button>
+
+        <div class="sub-button-group">
+          <a href="#">회원가입</a>
+          <a href="#">아이디 찾기</a>
+          <a href="#">비밀번호 찾기</a>
+        </div>
+      </form>
+    </main>
+
+    <aside class="sidebar lg-hidden">
+      <header class="sidebar-header">
+        <h1 class="logo is-active">
+          <a href="#" aria-label="홈으로 가기">
+            <i class="ic-logo"></i>
+          </a>
+        </h1>
+
+        <!-- NOTE: 로그인을 한 경우 -->
+        <div class="sidebar-user">
+          <a href="#">
+            <div class="avatar-24">
+              <img src="./assets/images/img-user-01.jpg" alt="엄기준" />
+            </div>
+            <strong class="user-name">엄기준</strong>
+          </a>
+        </div>
+
+        <!-- NOTE: 로그인을 하지 않은 경우 -->
+        <!-- <div class="sidebar-auth">
+            <a class="btn-outlined btn-32" href="#">로그인</a>
+            <a class="btn-primary btn-32" href="#">회원가입</a>
+          </div> -->
+      </header>
+
+      <nav class="sidebar-nav">
+        <h2 class="visually-hidden">메뉴</h2>
+
+        <div class="sidebar-menu">
+          <ul class="sidebar-menu-list">
+            <li class="sidebar-menu-item is-active">
+              <a href="#">SEARCH</a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#">POST</a>
+            </li>
+            <li class="sidebar-menu-item">
+              <a href="#">EVENT</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- NOTE: 로그인을 한 경우 -->
+        <div class="sidebar-user-menu">
+          <ul class="user-menu-list">
+            <li class="user-menu-item is-active">
+              <a href="#">
+                알림
+                <i class="ic-new" aria-label="새로운 알림"></i>
+              </a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">마이페이지</a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">찜 목록</a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">리뷰 목록</a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">나의 리뷰</a>
+            </li>
+            <li class="user-menu-item">
+              <a href="#">로그아웃</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <div class="overlay" aria-hidden></div>
+  </body>
+</html>
