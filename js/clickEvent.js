@@ -1,19 +1,18 @@
 document
-  .getElementsByClassName('my-menu-button')[0]
+  .getElementById('my-menu-button')
   .addEventListener('click', function () {
-    document.getElementsByClassName('my-menu')[0].classList.toggle('is-active')
+    document.getElementById('my-menu').classList.toggle('is-active')
   })
 
 document
-  .getElementsByClassName('gnb-menu-button')[0]
+  .getElementById('gnb-menu-button')
   .addEventListener('click', function () {
-    document.getElementsByClassName('sidebar')[0].classList.add('is-active')
-    document.getElementsByClassName('overlay')[0].classList.add('is-active')
+    document.getElementById('sidebar').classList.add('is-active')
+    document.getElementById('overlay').classList.add('is-active')
   })
 
-document
-  .getElementsByClassName('overlay')[0]
-  .addEventListener('click', function () {
-    document.getElementsByClassName('sidebar')[0].classList.remove('is-active')
-    document.getElementsByClassName('overlay')[0].classList.remove('is-active')
-  })
+document.getElementById('overlay').addEventListener('click', function () {
+  document.getElementById('sidebar').classList.remove('is-active')
+  document.getElementById('overlay').classList.remove('is-active')
+  document.getElementById('filter-sidebar').classList.remove('is-active')
+})

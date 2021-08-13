@@ -54,6 +54,7 @@
                 </nav>
 
                 <button
+                  id="gnb-menu-button"
                   class="gnb-menu-button lg-hidden"
                   type="button"
                   aria-label="메뉴 펼치기"
@@ -64,8 +65,9 @@
 
               <div class="gnb-right">
                 <!-- NOTE: 로그인을 한 경우 -->
-                <div class="my-menu sm-hidden">
+                <div id="my-menu" class="my-menu sm-hidden">
                   <button
+                    id="my-menu-button"
                     class="my-menu-button"
                     type="button"
                     aria-label="마이메뉴 열기"
@@ -678,7 +680,7 @@
         </div>
       </header>
 
-      <div class="selected-menu-body is-active">
+      <div id="selected-menu-body" class="selected-menu-body">
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
@@ -759,7 +761,8 @@
               </div>
 
               <button
-                class="flip-button is-active"
+                id="flip-button"
+                class="flip-button"
                 type="button"
                 aria-label="선택 메뉴 상세보기 버튼"
               >
@@ -771,17 +774,17 @@
       </div>
     </footer>
 
-    <aside class="sidebar lg-hidden">
+    <aside id="sidebar" class="sidebar lg-hidden">
       <header class="sidebar-header">
         <h1 class="logo is-active">
           <a href="#" aria-label="홈으로 가기">
-            <i class="ic-logo"></i>
+            <i class="ic-logo" aria-hidden></i>
           </a>
         </h1>
 
         <!-- NOTE: 로그인을 한 경우 -->
         <div class="sidebar-user">
-          <a href="#">
+          <a href="#" aria-label="마이페이지로 이동하기">
             <div class="avatar-24">
               <img src="./assets/images/img-user-01.jpg" alt="엄기준" />
             </div>
@@ -791,9 +794,9 @@
 
         <!-- NOTE: 로그인을 하지 않은 경우 -->
         <!-- <div class="sidebar-auth">
-            <a class="btn-outlined btn-32" href="#">로그인</a>
-            <a class="btn-primary btn-32" href="#">회원가입</a>
-          </div> -->
+          <a class="btn-outlined btn-32" href="#">로그인</a>
+          <a class="btn-primary btn-32" href="#">회원가입</a>
+        </div> -->
       </header>
 
       <nav class="sidebar-nav">
@@ -802,7 +805,7 @@
         <div class="sidebar-menu">
           <ul class="sidebar-menu-list">
             <li class="sidebar-menu-item is-active">
-              <a href="#">SEARCH</a>
+              <a href="./search.html">SEARCH</a>
             </li>
             <li class="sidebar-menu-item">
               <a href="#">POST</a>
@@ -842,6 +845,9 @@
       </nav>
     </aside>
 
-    <div class="overlay" aria-hidden></div>
+    <div id="overlay" class="overlay" aria-hidden></div>
+
+    <script src="./js/clickEvent.js"></script>
+    <script src="./js/store.js"></script>
   </body>
 </html>

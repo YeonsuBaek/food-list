@@ -109,11 +109,11 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div class="join">
-              <h1 class="join-header">회원가입</h1>
+            <div class="member">
+              <h1 class="member-header">회원가입</h1>
 
-              <form class="join-body" action="#" method="GET">
-                <div class="input-text-group">
+              <form class="member-body" action="#" method="GET">
+                <div class="input-group">
                   <label class="visually-hidden" for="username">닉네임</label>
                   <input type="text" id="username" placeholder="닉네임" />
 
@@ -122,7 +122,9 @@
                   <p>
                     영문 소문자, 숫자 및 기호 _ 를 사용할 수 있습니다. (3~20자)
                   </p>
+                </div>
 
+                <div class="input-group">
                   <label class="visually-hidden" for="password">비밀번호</label>
                   <input type="password" id="password" placeholder="비밀번호" />
 
@@ -143,14 +145,18 @@
                 <div class="input-radio-group">
                   <h4 class="visually-hidden">성별</h4>
 
-                  <input type="radio" id="woman" name="여자" value="여자" />
-                  <label for="woman">여자</label>
+                  <div class="input-radio">
+                    <input type="radio" id="woman" name="gender" value="여자" />
+                    <label for="woman">여자</label>
+                  </div>
 
-                  <input type="radio" id="man" name="남자" value="남자" />
-                  <label for="man">남자</label>
+                  <div class="input-radio">
+                    <input type="radio" id="man" name="gender" value="남자" />
+                    <label for="man">남자</label>
+                  </div>
                 </div>
 
-                <button class="join-button btn-primary btn-55" type="submit">
+                <button class="member-button btn-primary btn-55" type="submit">
                   가입하기
                 </button>
               </form>
