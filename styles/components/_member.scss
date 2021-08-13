@@ -1,4 +1,4 @@
-.login {
+.member {
   @include flexbox;
   flex-direction: column;
 
@@ -33,9 +33,33 @@
         margin-bottom: 0;
       }
     }
+
+    p {
+      @include text-style(13, $teritory);
+    }
   }
 
-  .login-button {
+  .input-radio-group {
+    @include flexbox(start);
+    margin-bottom: 20px;
+  }
+
+  .input-radio {
+    @include flexbox(start);
+
+    input[type='radio'] {
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+    }
+
+    label {
+      margin-right: 30px;
+      @include text-style(14, $primary);
+    }
+  }
+
+  .member-button {
     width: 100%;
     height: auto;
     padding: 10px;
@@ -78,7 +102,7 @@
       }
     }
 
-    .login-button {
+    .member-button {
       margin-bottom: 20px;
       @include text-style(16);
     }
