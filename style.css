@@ -1998,6 +1998,52 @@ i {
           line-height: 24px;
           letter-spacing: -0.01em; } }
 
+.search-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .search-history-header .title,
+  .search-history-header button {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #8c8d96;
+    font-weight: 400; }
+
+.search-history-content .placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 44px;
+  padding: 0 8px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #8c8d96; }
+
+.search-history-item {
+  position: relative; }
+  .search-history-item .word-button {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #3f4150;
+    width: 100%;
+    padding: 6px 32px 6px 8px;
+    text-align: left; }
+  .search-history-item .delete-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    color: #b2b3b9; }
+
 .container {
   width: 100%;
   padding: 0 5px;
@@ -2361,5 +2407,35 @@ body {
         letter-spacing: -0.01em; }
       .sub-search {
         width: 312px; } }
+
+.search-modal {
+  position: fixed;
+  top: 0;
+  z-index: 250;
+  width: 100%;
+  height: 100vh;
+  padding: 12px 0;
+  background-color: #ffffff;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 300ms ease-in-out; }
+  .search-modal.is-active {
+    transform: translate3d(0, 0, 0); }
+  .search-modal-header {
+    margin-bottom: 20px; }
+  .search-modal-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .search-modal-form .input-group {
+      flex-grow: 1;
+      margin-right: 8px; }
+    .search-modal-form .close-button {
+      flex-grow: 0;
+      padding: 4px 8px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: #3f4150;
+      font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */
