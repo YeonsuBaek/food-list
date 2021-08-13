@@ -1,0 +1,30 @@
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $search-modal-level;
+  width: 100%;
+  height: 100vh;
+  padding: 12px 0;
+  background-color: $white;
+
+  &-header {
+    margin-bottom: 20px;
+  }
+
+  &-form {
+    @include flexbox(between);
+
+    .input-group {
+      flex-grow: 1;
+      margin-right: 8px;
+    }
+
+    .close-button {
+      flex-grow: 0;
+      padding: 4px 8px;
+      @include text-style(14, $primary);
+      font-weight: 700;
+    }
+  }
+}
