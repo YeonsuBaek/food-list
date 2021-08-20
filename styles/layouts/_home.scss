@@ -1,5 +1,11 @@
 .home {
+  max-height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+
   &-section {
+    @include flexbox;
+    scroll-snap-align: start;
     position: relative;
     width: 100%;
     height: 100vh;
