@@ -42,6 +42,21 @@
       overflow: hidden;
       border-radius: 4px;
 
+      &:nth-child(3) {
+        position: relative;
+
+        &::after {
+          @include pos-center;
+          content: '더보기';
+          @include text-style(12, $white);
+          white-space: nowrap;
+        }
+
+        img {
+          filter: brightness(70%);
+        }
+      }
+
       &:last-child {
         margin-right: 0;
       }
@@ -94,24 +109,16 @@
           transition: transform 200ms ease-in-out;
         }
 
-        &:hover {
-          img {
-            transform: scale(1.1);
-          }
-        }
-
-        &:last-child {
-          position: relative;
-
+        &:nth-child(3) {
           &::after {
-            @include pos-center;
-            content: '더보기';
             @include text-style(14, $white);
             font-weight: 700;
           }
+        }
 
+        &:hover {
           img {
-            filter: brightness(70%);
+            transform: scale(1.1);
           }
         }
       }
