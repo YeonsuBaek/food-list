@@ -11,22 +11,6 @@
   .review-card {
     @include flexbox(center, start);
     flex-direction: column;
-
-    &-header {
-      order: 1;
-    }
-
-    &-image-group {
-      order: 2;
-    }
-
-    &-body {
-      order: 3;
-    }
-
-    &-footer {
-      order: 4;
-    }
   }
 
   @include responsive(T) {
@@ -38,19 +22,17 @@
 
       &-wrapper {
         width: 60%;
+        margin-right: 10px;
       }
 
       &-image-group {
         width: 40%;
-        order: 4;
       }
 
       &-body {
-        order: 2;
       }
 
       &-footer {
-        order: 3;
       }
     }
   }
