@@ -9,7 +9,7 @@
     width: 100%;
     height: 36px;
     padding: 0 12px;
-    @include text-style(14, $primary);
+    @include text-style(18, $primary);
     font-weight: 700;
     background-color: $background;
 
@@ -184,6 +184,14 @@
 
     .item-wrapper {
       display: block;
+    }
+  }
+
+  @include responsive(T) {
+    &-item {
+      label {
+        @include text-style(16, $primary);
+      }
     }
   }
 }
