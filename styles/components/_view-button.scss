@@ -1,4 +1,10 @@
+$ic-chevron-size: 22px;
+$ic-chevron-size-tablet: 34px;
+$view-button-padding: 16px;
+$view-button-padding-tablet: 32px;
+
 .view-button {
+  position: relative;
   @include inline-flexbox;
   font-family: $font-eng;
   color: $white;
@@ -8,11 +14,12 @@
   flex-shrink: 0;
 
   a {
-    padding: 9px 16px;
+    padding: 9px $view-button-padding;
     @include flexbox;
 
     span {
       display: inline-block;
+      margin-right: $ic-chevron-size;
       font-size: 14px;
       letter-spacing: -0.01em;
       flex-grow: 1;
@@ -20,17 +27,27 @@
     }
 
     .ic-chevron {
-      margin-left: 14px;
+      position: absolute;
+      top: 50%;
+      right: $view-button-padding;
       color: $white;
-      font-size: 22px;
+      font-size: $ic-chevron-size;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      .ic-chevron {
+        animation: move-chevron 700ms ease-in-out infinite alternate;
+      }
     }
   }
 
   @include responsive(T) {
     a {
-      padding: 20px 32px;
+      padding: 20px $view-button-padding-tablet;
 
       span {
+        margin-right: $ic-chevron-size-tablet;
         font-size: 24px;
         letter-spacing: -0.01em;
       }
@@ -39,5 +56,22 @@
         font-size: 34px;
       }
     }
+
+    .ic-chevron {
+      right: $view-button-padding-tablet;
+    }
+  }
+}
+
+@keyframes move-chevron {
+  0% {
+    right: $view-button-padding;
+
+    @include responsive(T) {
+      right: $view-button-padding-tablet;
+    }
+  }
+  100% {
+    right: 8px;
   }
 }
