@@ -2,8 +2,7 @@
   display: block;
   width: 100%;
   height: auto;
-  padding: 5px 16px;
-  @include text-style(13, $primary);
+  padding: 8px 16px;
   background-color: $white;
   border: 1px solid $border;
   border-radius: 4px;
@@ -27,6 +26,11 @@
 .form-input,
 .form-select {
   @extend %form-base;
+  @include text-style(13, $primary);
+
+  @include responsive(T) {
+    @include text-style(16);
+  }
 }
 
 .input-group {
