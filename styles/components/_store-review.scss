@@ -1,4 +1,14 @@
 .store-review {
+  &-group {
+    display: none;
+    visibility: hidden;
+
+    &.is-active {
+      display: block;
+      visibility: visible;
+    }
+  }
+
   .review-item {
     padding: 20px 0;
     border-bottom: 1px solid $border;

@@ -1,18 +1,25 @@
+$store-menu-content-padding: 15px;
+$store-menu-item-height: 72px;
+$store-menu-item-margin: 15px;
+$pizza-length: 5;
+$side-length: 4;
+$drink-length: 6;
+
+@function _menu-max-content-height($length) {
+  @return $store-menu-item-height * $length + $store-menu-content-padding * 2 +
+    $store-menu-item-margin * ($length - 1);
+}
+
 .store-menu {
-  $store-menu-content-padding: 15px;
-  $store-menu-item-height: 72px;
-  $store-menu-item-margin: 15px;
-  $pizza-length: 5;
-  $side-length: 4;
-  $drink-length: 6;
-
-  @function _menu-max-content-height($length) {
-    @return $store-menu-item-height * $length + $store-menu-content-padding * 2 +
-      $store-menu-item-margin * ($length - 1);
-  }
-
   &-group {
+    display: none;
+    visibility: hidden;
     margin-bottom: 60px;
+
+    &.is-active {
+      display: block;
+      visibility: visible;
+    }
   }
 
   &.is-open {
