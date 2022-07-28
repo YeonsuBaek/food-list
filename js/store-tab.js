@@ -19,4 +19,5 @@ document
 document.querySelector('.flip-button').addEventListener('click', function () {
   document.querySelector('.flip-button').classList.toggle('is-active')
   document.querySelector('.selected-menu-body').classList.toggle('is-active')
+  document.querySelector('.overlay').classList.toggle('is-active')
 })
