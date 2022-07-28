@@ -52,7 +52,6 @@
                 </nav>
 
                 <button
-                  id="gnb-menu-button"
                   class="gnb-menu-button lg-hidden"
                   type="button"
                   aria-label="메뉴 펼치기"
@@ -63,9 +62,8 @@
 
               <div class="gnb-right">
                 <!-- NOTE: 로그인을 한 경우 -->
-                <div id="my-menu" class="my-menu lg-only">
+                <div class="my-menu lg-only">
                   <button
-                    id="my-menu-button"
                     class="my-menu-button"
                     type="button"
                     aria-label="마이메뉴 열기"
@@ -130,12 +128,12 @@
             </header>
 
             <div class="sub-button-group sm-only">
-              <button id="filter-button" class="filter-button" type="button">
+              <button class="filter-button" type="button">
                 <i class="ic-cart" aria-hidden></i>
                 필터 보기
               </button>
 
-              <button id="search-button" class="search-button" type="button">
+              <button class="search-button" type="button">
                 <i class="ic-search" aria-hidden></i>
                 검색하기
               </button>
@@ -820,7 +818,7 @@
       </div>
     </main>
 
-    <aside id="filter-sidebar" class="filter-sidebar sm-only">
+    <aside class="filter-sidebar sm-only">
       <form action="#" method="GET">
         <header class="filter-header">
           <h1>필터</h1>
@@ -831,7 +829,7 @@
             <button type="submit">
               <i class="ic-check" aria-label="필터 저장 버튼"></i>
             </button>
-            <button id="filter-close" type="submit">
+            <button class="filter-close" type="submit">
               <i class="ic-close" aria-label="필터 조회 버튼"></i>
             </button>
           </div>
@@ -1319,7 +1317,7 @@
       </form>
     </aside>
 
-    <aside id="search-modal" class="search-modal sm-only">
+    <aside class="search-modal sm-only">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
@@ -1342,9 +1340,7 @@
                     <i class="ic-close" aria-hidden></i>
                   </button>
                 </div>
-                <button id="close-button" class="close-button" type="button">
-                  취소
-                </button>
+                <button class="close-button" type="button">취소</button>
               </div>
             </header>
 
@@ -1402,7 +1398,7 @@
       </div>
     </aside>
 
-    <aside id="sidebar" class="sidebar lg-hidden">
+    <aside class="sidebar lg-hidden">
       <header class="sidebar-header">
         <h1 class="logo is-active">
           <a href="#" aria-label="홈으로 가기">
@@ -1473,9 +1469,8 @@
       </nav>
     </aside>
 
-    <div id="overlay" class="overlay" aria-hidden></div>
+    <div class="overlay" aria-hidden></div>
 
-    <script src="./js/clickEvent.js"></script>
-    <script src="./js/search.js"></script>
+    <script src="./js/sidebar.js"></script>
   </body>
 </html>

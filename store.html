@@ -54,7 +54,6 @@
                 </nav>
 
                 <button
-                  id="gnb-menu-button"
                   class="gnb-menu-button lg-hidden"
                   type="button"
                   aria-label="메뉴 펼치기"
@@ -65,9 +64,8 @@
 
               <div class="gnb-right">
                 <!-- NOTE: 로그인을 한 경우 -->
-                <div id="my-menu" class="my-menu lg-only">
+                <div class="my-menu lg-only">
                   <button
-                    id="my-menu-button"
                     class="my-menu-button"
                     type="button"
                     aria-label="마이메뉴 열기"
@@ -905,7 +903,7 @@
         </div>
       </header>
 
-      <div id="selected-menu-body" class="selected-menu-body">
+      <div class="selected-menu-body">
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
@@ -986,7 +984,6 @@
               </div>
 
               <button
-                id="flip-button"
                 class="flip-button"
                 type="button"
                 aria-label="선택 메뉴 상세보기 버튼"
@@ -999,7 +996,7 @@
       </div>
     </footer>
 
-    <aside id="sidebar" class="sidebar lg-hidden">
+    <aside class="sidebar lg-hidden">
       <header class="sidebar-header">
         <h1 class="logo is-active">
           <a href="#" aria-label="홈으로 가기">
@@ -1070,9 +1067,8 @@
       </nav>
     </aside>
 
-    <div id="overlay" class="overlay" aria-hidden></div>
+    <div class="overlay" aria-hidden></div>
 
-    <script src="./js/clickEvent.js"></script>
-    <script src="./js/store.js"></script>
+    <script src="./js/sidebar.js"></script>
   </body>
 </html>
