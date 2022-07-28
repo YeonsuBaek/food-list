@@ -15,3 +15,8 @@ document
     document.querySelector('.store-menu-group').classList.add('is-active')
     document.querySelector('.store-menu-button').classList.add('is-active')
   })
+
+document.querySelector('.flip-button').addEventListener('click', function () {
+  document.querySelector('.flip-button').classList.toggle('is-active')
+  document.querySelector('.selected-menu-body').classList.toggle('is-active')
+})
