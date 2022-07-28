@@ -64,5 +64,13 @@ $drink-length: 6;
     &-group {
       margin-bottom: 180px;
     }
+
+    &-item {
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
