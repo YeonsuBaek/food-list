@@ -1031,7 +1031,7 @@
               <h2 class="title">도우 선택</h2>
 
               <div class="menu-dough-list">
-                <div class="menu-dough-select-item">
+                <div class="menu-dough-item">
                   <input
                     type="radio"
                     name="dough"
@@ -1039,31 +1039,31 @@
                     id="dough1"
                     checked
                   />
-                  <label for="huey">
+                  <label for="dough1">
                     슈퍼시드 함유 도우
                     <strong>+2,000원</strong>
                   </label>
                 </div>
 
-                <div class="menu-dough-select-item">
+                <div class="menu-dough-item">
                   <input type="radio" name="dough" value="dough2" id="dough2" />
-                  <label for="huey">
+                  <label for="dough2">
                     오리지널 도우
                     <strong>+0원</strong>
                   </label>
                 </div>
 
-                <div class="menu-dough-select-item">
+                <div class="menu-dough-item">
                   <input type="radio" name="dough" value="dough3" id="dough3" />
-                  <label for="huey">
+                  <label for="dough3">
                     나폴리 도우
                     <strong>+0원</strong>
                   </label>
                 </div>
 
-                <div class="menu-dough-select-item">
-                  <input type="radio" name="dough" value="dough3" id="dough3" />
-                  <label for="huey">
+                <div class="menu-dough-item">
+                  <input type="radio" name="dough" value="dough3" id="dough4" />
+                  <label for="dough4">
                     씬 도우
                     <strong>+0원</strong>
                   </label>
@@ -1075,9 +1075,13 @@
               <h2 class="title">수량 선택</h2>
 
               <div class="menu-amount-select">
-                <i class="ic-chevron" aria-label="1개 줄이기"></i>
-                <span>1개</span>
-                <i class="ic-chevron" aria-label="1개 늘리기"></i>
+                <button class="minus-button" type="button">
+                  <i class="ic-chevron minus" aria-label="1개 줄이기"></i>
+                </button>
+                <span class="amount">1개</span>
+                <button class="plus-button" type="button">
+                  <i class="ic-chevron" aria-label="1개 늘리기"></i>
+                </button>
               </div>
             </div>
 
