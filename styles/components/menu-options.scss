@@ -1,0 +1,89 @@
+.option {
+  &-size,
+  &-dough {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $border;
+  }
+
+  &-title {
+    margin-bottom: 8px;
+    @include text-style(16, $dark);
+    font-weight: 700;
+  }
+
+  &-size {
+    .button-group {
+      @include flexbox;
+
+      button:first-child {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &-dough {
+    &-item {
+      @include flexbox(start);
+      margin-bottom: 8px;
+
+      input {
+        margin-right: 8px;
+        cursor: pointer;
+      }
+
+      label {
+        width: 100%;
+        @include flexbox(between);
+        @include text-style(13, $secondary);
+        cursor: pointer;
+
+        strong {
+          font-weight: 400;
+        }
+      }
+
+      input:checked + label {
+        color: $yellow;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-amount {
+    margin-bottom: 40px;
+
+    &-select {
+      height: 36px;
+      @include flexbox(between);
+      padding: 0 24px;
+      margin: 0 32px;
+      border: 1px solid $border;
+      border-radius: 18px;
+
+      button {
+        width: 40px;
+        height: 100%;
+        i {
+          @include text-style(14, $teritory);
+        }
+
+        &:hover,
+        &:active {
+          i {
+            color: $secondary;
+          }
+        }
+      }
+    }
+
+    .minus-button {
+      transform: rotate(180deg);
+    }
+
+    .amount {
+      @include text-style(16, $primary);
+      font-weight: 500;
+    }
+  }
+}
