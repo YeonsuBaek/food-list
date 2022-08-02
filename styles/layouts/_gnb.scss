@@ -1,11 +1,11 @@
 .gnb {
   position: fixed;
   top: 0;
-  z-index: $gnb-level;
   width: 100%;
   height: $gnb-height-sm;
   background-color: rgba($white, 0.9);
   box-shadow: 0px 4px 10px rgba(63, 65, 80, 0.2);
+  z-index: $gnb-level;
 
   &-wrapper {
     @include flexbox(between);
@@ -35,10 +35,11 @@
 
     .ic-menu {
       font-size: 24px;
-      color: $secondary;
+      color: $primary;
     }
 
-    &:active {
+    &:active,
+    &:hover {
       .ic-menu {
         color: $yellow;
       }

@@ -1,0 +1,31 @@
+.gnb-nav {
+  &-item {
+    @include inline-flexbox;
+
+    button {
+      padding: 0 26px;
+      height: 70px;
+      border-bottom: 2px solid transparent;
+
+      a {
+        font-family: $font-eng;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        color: $primary;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &.is-active {
+      button {
+        border-color: $yellow;
+
+        a {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
