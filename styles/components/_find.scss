@@ -3,13 +3,26 @@
   height: auto;
 
   &-header {
+    @include flexbox(between, start);
     margin: 16px 0 20px;
   }
 
   &-title {
     display: block;
-    @include text-style(16, $dark);
+    @include text-style(18, $dark);
     font-weight: 700;
+  }
+
+  .search-button {
+    i {
+      font-size: 24px;
+      color: $primary;
+
+      &:hover,
+      &:active {
+        color: $teritory;
+      }
+    }
   }
 
   &-summery {
@@ -37,7 +50,6 @@
 
   @include responsive(T) {
     &-header {
-      @include flexbox(between, start);
       margin: 32px 0 40px;
     }
 

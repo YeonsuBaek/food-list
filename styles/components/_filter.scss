@@ -1,2 +1,94 @@
+body {
+  position: relative;
+}
+
 .filter {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &-group {
+    margin-bottom: 24px;
+    @include flexbox(start, start);
+  }
+
+  &-toggle {
+    @include flexbox;
+    padding: 4px 16px;
+    @include text-style(16, $secondary);
+    background-color: $white;
+    border-radius: 30px;
+
+    &.is-active {
+      color: $yellow-dark;
+      font-weight: 700;
+      background-color: $yellow-light;
+    }
+
+    .ic-chevron {
+      @include flexbox;
+      margin-left: 4px;
+      font-size: 18px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &-menu {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-top: 8px;
+    width: 100%;
+    max-height: 320px;
+    border-radius: 8px 8px 0 0;
+    background-color: $white;
+    opacity: 0;
+    overflow-y: auto;
+    transform: translate3d(0, 280px, 0);
+    transition: all 200ms ease-in-out;
+
+    &.is-open {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-option {
+    &:hover,
+    &:active,
+    &.is-active {
+      background-color: $background;
+
+      button {
+        color: $yellow-dark;
+      }
+    }
+
+    &.is-active {
+      .ic-check {
+        color: $yellow-dark;
+      }
+    }
+
+    button {
+      @include flexbox(between);
+      padding: 16px 24px;
+      width: 100%;
+      height: 100%;
+      @include text-style(16, $primary);
+
+      .ic-check {
+        font-size: 18px;
+        color: $teritory;
+      }
+    }
+  }
 }
