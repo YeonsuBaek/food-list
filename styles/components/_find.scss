@@ -35,32 +35,6 @@
     }
   }
 
-  &-button-group {
-    @include flexbox;
-    margin-top: 16px;
-    margin-bottom: 24px;
-
-    button {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      @include text-style(12, $white);
-    }
-    .filter-button {
-      margin-right: 20px;
-      background-color: $yellow;
-    }
-
-    .search-button {
-      background-color: $teritory;
-    }
-
-    i {
-      display: block;
-      font-size: 32px;
-    }
-  }
-
   @include responsive(T) {
     &-header {
       @include flexbox(between, start);
