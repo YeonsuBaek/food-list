@@ -7,15 +7,10 @@ function toggleFilterMenu() {
   const filterOpened = document.querySelector('.filter.is-open')
 
   if (filterOpened) {
-    console.log(1)
     filterOpened.classList.remove('is-open')
   }
 
-  if (filter == filterOpened) {
-    console.log(2)
-    filter.classList.remove('is-open')
-  } else {
-    console.log(3)
+  if (filter != filterOpened) {
     filter.classList.add('is-open')
   }
 
