@@ -32,6 +32,7 @@ body {
       margin-left: 4px;
       font-size: 18px;
       transform: rotate(90deg);
+      transition: transform 200ms ease-in-out;
     }
   }
 
@@ -49,12 +50,7 @@ body {
     overflow-y: auto;
     transform: translate3d(0, 280px, 0);
     transition: all 200ms ease-in-out;
-
-    &.is-open {
-      visibility: visible;
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
+    z-index: $filter-menu-level;
 
     &::-webkit-scrollbar {
       display: none;
@@ -89,6 +85,19 @@ body {
         font-size: 18px;
         color: $teritory;
       }
+    }
+  }
+
+  &.is-open {
+    .filter-toggle {
+      .ic-chevron {
+        transform: rotate(-90deg);
+      }
+    }
+    .filter-menu {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
     }
   }
 }
