@@ -32,8 +32,8 @@
         <div class="row">
           <div class="col-sm-4">
             <h1 class="logo">
-              <a href="./index.html" aria-label="홈으로 가기">
-                <i class="ic-logo"></i>
+              <a href="./index.html" aria-label="FOOD LIST 홈">
+                <i class="ic-logo" aria-hidden></i>
               </a>
             </h1>
             <div class="gnb-wrapper">
@@ -41,14 +41,20 @@
                 <nav class="gnb-nav lg-only">
                   <h2 class="visually-hidden">메뉴</h2>
                   <ul class="gnb-nav-list">
-                    <li class="gnb-nav-item is-active">
-                      <a href="./search.html"> SEARCH </a>
+                    <li class="gnb-nav-item">
+                      <button type="button">
+                        <a href="./search.html"> SEARCH </a>
+                      </button>
                     </li>
                     <li class="gnb-nav-item">
-                      <a href="#"> POST </a>
+                      <button type="button">
+                        <a href="#"> POST </a>
+                      </button>
                     </li>
                     <li class="gnb-nav-item">
-                      <a href="#"> EVENT </a>
+                      <button type="button">
+                        <a href="#"> EVENT </a>
+                      </button>
                     </li>
                   </ul>
                 </nav>
@@ -58,7 +64,7 @@
                   type="button"
                   aria-label="메뉴 펼치기"
                 >
-                  <i class="ic-menu"></i>
+                  <i class="ic-menu" aria-hidden></i>
                 </button>
               </div>
 
@@ -105,52 +111,35 @@
       </div>
     </header>
 
-    <main class="sub">
+    <main class="store">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <header class="sub-header">
-              <div class="sub-wrapper">
-                <h1 class="sub-title">도미노피자 서수원점</h1>
-                <div class="sub-summery">
-                  <span class="kinds">치킨/피자</span>
-                  <div class="score-summery">
-                    <div class="star-rating">
-                      <i class="ic-star is-active"></i>
-                      <i class="ic-star is-active"></i>
-                      <i class="ic-star is-active"></i>
-                      <i class="ic-star is-active"></i>
-                      <i class="ic-star is-active"></i>
-                    </div>
-                    <div class="badge">30</div>
+            <header class="store-header">
+              <h1 class="store-title">도미노피자 서수원점</h1>
+              <div class="store-summery">
+                <span class="kinds">치킨/피자</span>
+                <div class="score-summery">
+                  <div class="star-rating-16 sm-only">
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
                   </div>
+                  <div class="star-rating-18 sm-hidden">
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                  </div>
+                  <div class="badge">30</div>
                 </div>
               </div>
-
-              <div class="sub-search input-group sm-hidden">
-                <i class="ic-search" aria-hidden></i>
-                <input
-                  class="form-input"
-                  type="text"
-                  placeholder="메뉴를 검색하세요"
-                />
-                <button
-                  class="delete-button"
-                  type="button"
-                  aria-label="입력한 문자 지우기"
-                >
-                  <i class="ic-close" aria-hidden></i>
-                </button>
-              </div>
             </header>
-          </div>
-        </div>
-      </div>
 
-      <div class="store">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 col-md-4 col-lg-3">
+            <div class="store-info">
               <div class="store-image">
                 <img
                   src="./assets/images/img-store-01.jpg"
@@ -158,12 +147,10 @@
                 />
                 <i class="ic-bookmark" aria-label="북마크 버튼"></i>
               </div>
-            </div>
 
-            <div class="col-sm-4 col-md-8 col-lg-9">
-              <div class="store-info">
-                <dl class="store-info-list">
-                  <div class="store-info-item">
+              <div class="store-detail">
+                <dl class="store-detail-list">
+                  <div class="store-detail-item">
                     <dt>주소</dt>
                     <dd>
                       경기 수원시 권선구 호매실로218번길 122 <br />
@@ -171,17 +158,17 @@
                       (지번) 호매실동 1375-2
                     </dd>
                   </div>
-                  <div class="store-info-item">
+                  <div class="store-detail-item">
                     <dt>영업시간</dt>
                     <dd>매일 11:30 ~ 22:00</dd>
                   </div>
-                  <div class="store-info-item">
+                  <div class="store-detail-item">
                     <dt>전화</dt>
                     <dd>
                       <a href="tel:0312983082"> 031-298-3082 </a>
                     </dd>
                   </div>
-                  <div class="store-info-item">
+                  <div class="store-detail-item">
                     <dt>홈페이지</dt>
                     <dd>
                       <a href="https://web.dominos.co.kr" target="_blank"
@@ -192,13 +179,7 @@
                 </dl>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
             <div class="store-tab">
               <ul class="store-tab-list">
                 <li class="store-tab-item">
@@ -996,11 +977,11 @@
       </div>
     </footer>
 
-    <aside class="menu-modal is-open">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <header class="menu-header">
+    <aside class="menu-modal">
+      <header class="menu-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
               <button
                 type="button"
                 class="close-button lg-hidden"
@@ -1018,8 +999,14 @@
               >
                 <i class="ic-close" aria-hidden></i>
               </button>
-            </header>
+            </div>
+          </div>
+        </div>
+      </header>
 
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
             <div class="menu-left">
               <div class="menu-image">
                 <img src="./assets/images/img-pizza-01.jpg" alt="블록버스터4" />
