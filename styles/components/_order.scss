@@ -2,14 +2,27 @@
   margin-bottom: 40px;
 
   &-item {
-    @include flexbox(start);
     width: 100%;
-    margin-bottom: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $background;
+    }
+
+    a {
+      @include flexbox(start);
+    }
   }
 
   &-store-image {
-    width: 58px;
-    height: 58px;
+    width: 72px;
+    height: 72px;
     margin-right: 10px;
     overflow: hidden;
     border-radius: 4px;
@@ -34,15 +47,15 @@
   }
 
   &-store-title {
-    @include text-style(13, $dark);
-    font-weight: 500;
+    @include text-style(16, $dark);
+    font-weight: 700;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   &-store-summery {
-    @include text-style(12, $primary);
+    @include text-style(13, $secondary);
     font-weight: 400;
     overflow: hidden;
     white-space: nowrap;
@@ -57,7 +70,7 @@
     }
 
     .badge {
-      @include text-style(12, $yellow);
+      @include text-style(13, $yellow);
       font-weight: 700;
     }
   }
@@ -71,7 +84,7 @@
     }
 
     &-item {
-      margin-bottom: 20px;
+      padding: 20px;
     }
 
     &-store-image {
@@ -87,24 +100,29 @@
       }
     }
 
-    &-shop-tag {
-      @include text-style(13, $secondary);
-    }
-
     &-store-title {
-      @include text-style(24, $dark);
+      @include text-style(24);
       font-weight: 700;
     }
 
     &-store-summery {
       display: block;
-      @include text-style(16, $primary);
-      margin-bottom: 4px;
+      @include text-style(16);
+    }
+
+    .score-summery {
+      .star-rating-18 {
+        margin-right: 4px;
+      }
+
+      .badge {
+        @include text-style(14);
+      }
     }
 
     .button-group {
       @include flexbox(end);
-      margin: 0 20px;
+      margin-left: 12px;
 
       .bookmark-button:hover {
         background-color: $yellow;
@@ -112,7 +130,7 @@
         .ic-bookmark:before {
           @include flexbox;
           content: '찜하기';
-          @include text-style(13px, $white);
+          @include text-style(13, $white);
           font-weight: 700;
         }
       }
@@ -123,7 +141,7 @@
         .ic-comment:before {
           @include flexbox;
           content: '리뷰쓰기';
-          @include text-style(13px, $white);
+          @include text-style(13, $white);
           font-weight: 700;
         }
       }
@@ -154,15 +172,42 @@
     }
 
     &-store-summery {
-      margin-bottom: 10px;
+      @include text-style(18);
+    }
+
+    .score-summery {
+      .star-rating-20 {
+        margin-right: 4px;
+      }
+
+      .badge {
+        @include text-style(16);
+      }
     }
 
     .button-group {
-      margin: 0 40px;
+      margin-right: 20px;
 
       button {
         width: 72px;
         height: 72px;
+      }
+
+      .bookmark-button:hover {
+        .ic-bookmark:before {
+          @include text-style(16, $white);
+        }
+      }
+
+      .review-button:hover {
+        .ic-comment:before {
+          @include text-style(16, $white);
+        }
+      }
+
+      i {
+        @include flexbox;
+        font-size: 40px;
       }
     }
   }
