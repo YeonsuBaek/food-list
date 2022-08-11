@@ -1,5 +1,40 @@
 .store {
+  padding-top: $gnb-height-sm;
   margin-bottom: 30px;
+
+  &-header {
+    padding: 16px 0 12px 0;
+  }
+
+  &-title {
+    @include text-style(18, $dark);
+  }
+
+  &-summery {
+    @include flexbox(start);
+
+    .kinds {
+      margin-right: 4px;
+      @include text-style(14, $teritory);
+    }
+
+    .score-summery {
+      @include flexbox(start);
+
+      .star-rating-16 {
+        margin-right: 4px;
+      }
+
+      .badge {
+        @include text-style(13, $yellow);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-info {
+    margin-bottom: 24px;
+  }
 
   &-image {
     position: relative;
@@ -21,15 +56,18 @@
       right: 0;
       font-size: 36px;
       color: $white;
+      transition: color 200ms ease-in-out;
 
-      &.is-active {
+      &.is-active,
+      &:hover,
+      &:active {
         color: $yellow;
       }
     }
   }
 
-  &-info {
-    @include text-style(13, $primary);
+  &-detail {
+    @include text-style(14, $primary);
 
     &-item {
       @include flexbox(start, start);
@@ -54,50 +92,64 @@
   }
 
   @include responsive(T) {
-    position: relative;
+    padding-top: $gnb-height-md;
     margin-bottom: 40px;
 
-    &-image {
-      margin-bottom: 0;
+    &-header {
+      padding: 32px 0 16px 0;
+    }
 
-      i {
-        transition: color 200ms ease-in-out;
+    &-title {
+      @include text-style(24);
+    }
+
+    &-summery {
+      .kinds {
+        margin-right: 8px;
+        @include text-style(16);
       }
 
-      i:hover {
-        color: $yellow;
+      .score-summery {
+        .star-rating-18 {
+          margin-right: 4px;
+        }
+
+        .badge {
+          @include text-style(16);
+        }
       }
     }
 
     &-info {
-      @include pos-center-y;
-      font-size: 14px;
+      margin-bottom: 36px;
+      @include flexbox(start);
+    }
+
+    &-image {
+      margin: 0 24px 0 0;
+      width: 264px;
+      height: 198px;
+      overflow: hidden;
+    }
+
+    &-detail {
+      @include text-style(16);
 
       &-item {
+        margin-bottom: 8px;
+
         dt {
-          margin-right: 12px;
+          width: 72px;
+          margin-right: 16px;
         }
       }
     }
   }
 
   @include responsive(D) {
-    &-info {
-      font-size: 16px;
-
-      &-list {
-        margin-bottom: 8px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      &-item {
-        dt {
-          margin-right: 20px;
-        }
-      }
+    &-image {
+      width: 320px;
+      height: 240px;
     }
   }
 }
