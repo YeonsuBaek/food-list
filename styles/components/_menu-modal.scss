@@ -1,7 +1,5 @@
-$meun-option-margin-bottom: 20px;
-
 .menu-modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -100%;
   width: 100%;
@@ -15,19 +13,28 @@ $meun-option-margin-bottom: 20px;
     left: 0;
   }
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .menu-header {
+    position: fixed;
+    top: 0;
+    left: 0;
     @include flexbox;
-    position: relative;
     margin-bottom: 8px;
+    width: 100%;
     height: $gnb-height-sm;
+    background-color: $white;
 
     .menu-title {
+      text-align: center;
       @include text-style(18, $dark);
     }
 
     .close-button {
       @include pos-center-y;
-      left: 0;
+      left: 8px;
       transform: translateY(-50%) rotate(180deg);
 
       i {
@@ -37,8 +44,12 @@ $meun-option-margin-bottom: 20px;
     }
   }
 
+  .menu-wrapper {
+    margin-top: $gnb-height-sm;
+  }
+
   .menu-image {
-    margin-bottom: $meun-option-margin-bottom;
+    margin-bottom: 16px;
     width: 100%;
     aspect-ratio: 4/3;
     overflow: hidden;
@@ -53,10 +64,10 @@ $meun-option-margin-bottom: 20px;
 
   .menu-detail {
     padding-bottom: 24px;
-    margin-bottom: $meun-option-margin-bottom;
+    margin-bottom: 16px;
     border-bottom: 1px solid $border;
 
-    strong {
+    span {
       @include text-style(16, $primary);
       font-weight: 500;
     }
